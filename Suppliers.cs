@@ -28,18 +28,14 @@ namespace Varsity_Phamarcy
 
         private void Suppliers_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Supplier_Order_Item' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'varsityPharmacyDataSet1.Supplier' table. You can move, or remove it, as needed.
+            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet1.Supplier);
+
             this.supplier_Order_ItemTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier_Order_Item);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Supplier' table. You can move, or remove it, as needed.
-            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier);
-            // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Supplier_Order_Item' table. You can move, or remove it, as needed.
-            this.supplier_Order_ItemTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier_Order_Item);
-            // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Products' table. You can move, or remove it, as needed.
-            this.productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
-            // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Supplier' table. You can move, or remove it, as needed.
-            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier);
+            
             
 
         }
@@ -86,7 +82,7 @@ namespace Varsity_Phamarcy
                         try
                         {
                             this.supplierTableAdapter.InsertQuery(NameS.Text, Email.Text, this.Phone.Text, Status);
-                            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier);
+                            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet1.Supplier);
                         }
                         catch
                         {
@@ -160,7 +156,7 @@ namespace Varsity_Phamarcy
                         try
                         {
                             this.supplierTableAdapter.UpdateQuery(NameS.Text, Email.Text, this.Phone.Text, Status, int.Parse(suppID.Text), int.Parse(suppID.Text));
-                            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier);
+                            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet1.Supplier);
                             MessageBox.Show("Supplier Is Updated");
                         }
                         catch
@@ -205,7 +201,7 @@ namespace Varsity_Phamarcy
         private void clear_Click(object sender, EventArgs e)
         {
             searchBox.Clear();
-            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier);
+            this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet1.Supplier);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -360,7 +356,7 @@ namespace Varsity_Phamarcy
             try
             {
                 string Name = "%" + searchBox.Text + "%";
-                this.supplierTableAdapter.FillBy(this.varsityPharmacyDataSet.Supplier, Name);
+                this.supplierTableAdapter.FillBy(this.varsityPharmacyDataSet1.Supplier, Name);
             }
             catch
             {
@@ -381,7 +377,7 @@ namespace Varsity_Phamarcy
             {
 
                 
-                this.supplier_Order_ItemTableAdapter.InsertQuery(Quantity, Total, NameS.Text);
+                this.supplier_Order_ItemTableAdapter.InsertQuery(Id, Quantity, Total, NameS.Text);
                 this.supplier_Order_ItemTableAdapter.Fill(this.varsityPharmacyDataSet.Supplier_Order_Item);
                 MessageBox.Show("Products Order Has Been Sent");
                 suppID.Text = "";
@@ -409,6 +405,11 @@ namespace Varsity_Phamarcy
         }
 
         private void list_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

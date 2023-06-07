@@ -111,6 +111,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VarsityPharmacyDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VarsityPharmacyDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VarsityPharmacyDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="VarsityPharmacyDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,6 +177,17 @@
     </None>
     <None Include="VarsityPharmacyDataSet.xss">
       <DependentUpon>VarsityPharmacyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VarsityPharmacyDataSet1.xsc">
+      <DependentUpon>VarsityPharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VarsityPharmacyDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VarsityPharmacyDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VarsityPharmacyDataSet1.xss">
+      <DependentUpon>VarsityPharmacyDataSet1.xsd</DependentUpon>
     </None>
     <None Include="VarsityPharmacyDataSet3.xsc">
       <DependentUpon>VarsityPharmacyDataSet3.xsd</DependentUpon>

@@ -56,7 +56,7 @@ namespace Varsity_Phamarcy
 
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            custName.Text = dataGridView4.CurrentRow.Cells[1].Value.ToString();
+            //custName.Text = dataGridView4.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,7 +77,7 @@ namespace Varsity_Phamarcy
             Q = int.Parse(quant.Text);
             ID = int.Parse(dataGridView2.CurrentRow.Cells[3].Value.ToString());
             Q -= 1;
-            textBox1.Text =(dataGridView2.CurrentRow.Cells[3].Value.ToString());
+            textBox1.Text =(dataGridView2.CurrentRow.Cells[2].Value.ToString());
             textBox2.Text =(dataGridView2.CurrentRow.Cells[2].Value.ToString());
             int temp = int.Parse(textBox1.Text);
             decimal temp2 = decimal.Parse(textBox2.Text);
@@ -148,7 +148,6 @@ namespace Varsity_Phamarcy
         {
             string Customer = custName.Text;
             string Staff = log.getUserName();
-
             string product = products;
             decimal price = decimal.Parse(this.Price.Text);
             int quantity = int.Parse(quant.Text);
@@ -265,7 +264,7 @@ namespace Varsity_Phamarcy
             pricee.Clear();
             quantityy.Clear();
             custName.Text = "";
-            //staffName.Text = "";
+            textBox1.Text = "";
             productName.Text = "";
             Price.Text = "";
             Total = 0;
@@ -288,7 +287,7 @@ namespace Varsity_Phamarcy
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            button10_Click(sender, e);
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -320,10 +319,7 @@ namespace Varsity_Phamarcy
             }
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void button5_Click_1(object sender, EventArgs e)
         {
@@ -335,6 +331,11 @@ namespace Varsity_Phamarcy
         private void productName_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView4_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            custName.Text = dataGridView4.CurrentRow.Cells[0].Value.ToString();
         }
     }
 }

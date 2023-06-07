@@ -7,9 +7,12 @@
     }
 }
 
-namespace Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters {
-    
-    
+namespace Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters
+{
+    partial class SupplierTableAdapter
+    {
+    }
+
     public partial class Supplier_Order_ItemTableAdapter {
     }
 }

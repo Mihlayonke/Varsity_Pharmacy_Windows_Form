@@ -47,17 +47,17 @@ namespace Varsity_Phamarcy
 
         public string getUserName()
         {
-            int ind = 0;
+            int index = 0;
 
             for (int i=0; i< Username.Length; i++)
             {
                 if (Username[i] == '@')
                 {
-                    ind = i;
+                    index = i;
                     break;
                 }
             }
-            Username = Username.Substring(0, ind);
+            Username = Username.Substring(0, index);
             
             return Username;
         }

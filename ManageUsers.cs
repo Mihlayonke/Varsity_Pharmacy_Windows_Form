@@ -340,13 +340,14 @@ namespace Varsity_Phamarcy
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             staffName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             staffID.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             staffPassword.Text =dataGridView1.CurrentRow.Cells[6].Value.ToString();
             staffPhone.Text =dataGridView1.CurrentRow.Cells[3].Value.ToString();
             staffEmail.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             comboBox1.SelectedItem = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            
 
             Status = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             

@@ -2400,8 +2400,6 @@ namespace Varsity_Phamarcy {
             
             private global::System.Data.DataColumn columnsupplierTelephoneNo;
             
-            private global::System.Data.DataColumn columnquantity;
-            
             private global::System.Data.DataColumn columnstatus;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2471,14 +2469,6 @@ namespace Varsity_Phamarcy {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn quantityColumn {
-                get {
-                    return this.columnquantity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn statusColumn {
                 get {
                     return this.columnstatus;
@@ -2522,14 +2512,13 @@ namespace Varsity_Phamarcy {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SupplierRow AddSupplierRow(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, int quantity, string status) {
+            public SupplierRow AddSupplierRow(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, string status) {
                 SupplierRow rowSupplierRow = ((SupplierRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         supplierName,
                         supplierEmailAddress,
                         supplierTelephoneNo,
-                        quantity,
                         status};
                 rowSupplierRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSupplierRow);
@@ -2564,7 +2553,6 @@ namespace Varsity_Phamarcy {
                 this.columnsupplierName = base.Columns["supplierName"];
                 this.columnsupplierEmailAddress = base.Columns["supplierEmailAddress"];
                 this.columnsupplierTelephoneNo = base.Columns["supplierTelephoneNo"];
-                this.columnquantity = base.Columns["quantity"];
                 this.columnstatus = base.Columns["status"];
             }
             
@@ -2579,8 +2567,6 @@ namespace Varsity_Phamarcy {
                 base.Columns.Add(this.columnsupplierEmailAddress);
                 this.columnsupplierTelephoneNo = new global::System.Data.DataColumn("supplierTelephoneNo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsupplierTelephoneNo);
-                this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnquantity);
                 this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -2597,7 +2583,6 @@ namespace Varsity_Phamarcy {
                 this.columnsupplierEmailAddress.MaxLength = 50;
                 this.columnsupplierTelephoneNo.AllowDBNull = false;
                 this.columnsupplierTelephoneNo.MaxLength = 50;
-                this.columnquantity.AllowDBNull = false;
                 this.columnstatus.AllowDBNull = false;
                 this.columnstatus.MaxLength = 50;
             }
@@ -3657,17 +3642,6 @@ namespace Varsity_Phamarcy {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int quantity {
-                get {
-                    return ((int)(this[this.tableSupplier.quantityColumn]));
-                }
-                set {
-                    this[this.tableSupplier.quantityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string status {
                 get {
                     return ((string)(this[this.tableSupplier.statusColumn]));
@@ -4195,7 +4169,7 @@ SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cus" +
@@ -4204,37 +4178,23 @@ SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cu
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        custID, custFName, custLName, custEmailAddress, custIDNumber, custA" +
-                "ge, custPhoneNumber, custGender, medicalAidNumber, custPassword, Status, Medical" +
-                "AidName\r\nFROM            Customers\r\nWHERE        (custFName LIKE @custFName)";
+            this._commandCollection[1].CommandText = "DELETE FROM Customers\r\nWHERE        (custID = @Original_custID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custFName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custFName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_custID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "custID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"INSERT INTO Customers
+            this._commandCollection[2].CommandText = "SELECT        custID, custFName, custLName, custEmailAddress, custIDNumber, custA" +
+                "ge, custPhoneNumber, custGender, medicalAidNumber, custPassword, Status, Medical" +
+                "AidName\r\nFROM            Customers\r\nWHERE        (custFName LIKE @custFName)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custFName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custFName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"INSERT INTO Customers
                          (custFName, custLName, custEmailAddress, custIDNumber, custAge, custPhoneNumber, custGender, medicalAidNumber, custPassword, Status, MedicalAidName)
 VALUES        (@custFName,@custLName,@custEmailAddress,@custIDNumber,@custAge,@custPhoneNumber,@custGender,@medicalAidNumber,@custPassword,@Status,@MedicalAidName);  
 SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, custPhoneNumber, custGender, medicalAidNumber, custPassword, Status, MedicalAidName FROM Customers WHERE (custID = SCOPE_IDENTITY())
 ";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custFName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custFName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custLName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custLName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custEmailAddress", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "custEmailAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custIDNumber", global::System.Data.SqlDbType.NVarChar, 13, global::System.Data.ParameterDirection.Input, 0, 0, "custIDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custAge", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "custAge", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custPhoneNumber", global::System.Data.SqlDbType.NVarChar, 13, global::System.Data.ParameterDirection.Input, 0, 0, "custPhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custGender", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custGender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@medicalAidNumber", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "medicalAidNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custPassword", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "custPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MedicalAidName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "MedicalAidName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"UPDATE       Customers
-SET                custFName = @custFName, custLName = @custLName, custEmailAddress = @custEmailAddress, custIDNumber = @custIDNumber, custAge = @custAge, custPhoneNumber = @custPhoneNumber, custGender = @custGender, 
-                         medicalAidNumber = @medicalAidNumber, custPassword = @custPassword, Status = @Status, MedicalAidName = @MedicalAidName
-WHERE        (custID = @Original_custID); 
-SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, custPhoneNumber, custGender, medicalAidNumber, custPassword, Status, MedicalAidName FROM Customers WHERE (custID = @custID)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custFName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custFName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custLName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custLName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4247,8 +4207,27 @@ SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cu
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custPassword", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "custPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MedicalAidName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "MedicalAidName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_custID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "custID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "custID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = @"UPDATE       Customers
+SET                custFName = @custFName, custLName = @custLName, custEmailAddress = @custEmailAddress, custIDNumber = @custIDNumber, custAge = @custAge, custPhoneNumber = @custPhoneNumber, custGender = @custGender, 
+                         medicalAidNumber = @medicalAidNumber, custPassword = @custPassword, Status = @Status, MedicalAidName = @MedicalAidName
+WHERE        (custID = @Original_custID); 
+SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, custPhoneNumber, custGender, medicalAidNumber, custPassword, Status, MedicalAidName FROM Customers WHERE (custID = @custID)";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custFName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custFName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custLName", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custLName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custEmailAddress", global::System.Data.SqlDbType.NVarChar, 2147483647, global::System.Data.ParameterDirection.Input, 0, 0, "custEmailAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custIDNumber", global::System.Data.SqlDbType.NVarChar, 13, global::System.Data.ParameterDirection.Input, 0, 0, "custIDNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custAge", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "custAge", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custPhoneNumber", global::System.Data.SqlDbType.NVarChar, 13, global::System.Data.ParameterDirection.Input, 0, 0, "custPhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custGender", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "custGender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@medicalAidNumber", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "medicalAidNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custPassword", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "custPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MedicalAidName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "MedicalAidName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_custID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "custID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "custID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4280,7 +4259,7 @@ SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cu
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBy(VarsityPharmacyDataSet.CustomersDataTable dataTable, string custFName) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((custFName == null)) {
                 throw new global::System.ArgumentNullException("custFName");
             }
@@ -4299,7 +4278,7 @@ SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cu
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual VarsityPharmacyDataSet.CustomersDataTable GetDataBy2(string custFName) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((custFName == null)) {
                 throw new global::System.ArgumentNullException("custFName");
             }
@@ -4674,9 +4653,33 @@ SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cu
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int Original_custID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(Original_custID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertQuery(string custFName, string custLName, string custEmailAddress, string custIDNumber, int custAge, string custPhoneNumber, string custGender, int medicalAidNumber, string custPassword, string Status, string MedicalAidName) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((custFName == null)) {
                 throw new global::System.ArgumentNullException("custFName");
             }
@@ -4755,7 +4758,7 @@ SELECT custID, custFName, custLName, custEmailAddress, custIDNumber, custAge, cu
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int UpdateQuery(string custFName, string custLName, string custEmailAddress, string custIDNumber, int custAge, string custPhoneNumber, string custGender, int medicalAidNumber, string custPassword, string Status, string MedicalAidName, int Original_custID, int custID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((custFName == null)) {
                 throw new global::System.ArgumentNullException("custFName");
             }
@@ -7252,44 +7255,39 @@ SELECT staffID, staffName, staffType, staffPhoneNo, staffEmailAddress, staffIden
             tableMapping.ColumnMappings.Add("supplierName", "supplierName");
             tableMapping.ColumnMappings.Add("supplierEmailAddress", "supplierEmailAddress");
             tableMapping.ColumnMappings.Add("supplierTelephoneNo", "supplierTelephoneNo");
-            tableMapping.ColumnMappings.Add("quantity", "quantity");
             tableMapping.ColumnMappings.Add("status", "status");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Supplier] WHERE (([supplier_ID] = @Original_supplier_ID) AND ([supplierName] = @Original_supplierName) AND ([supplierEmailAddress] = @Original_supplierEmailAddress) AND ([supplierTelephoneNo] = @Original_supplierTelephoneNo) AND ([quantity] = @Original_quantity) AND ([status] = @Original_status))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Supplier] WHERE (([supplier_ID] = @Original_supplier_ID) AND ([supplierName] = @Original_supplierName) AND ([supplierEmailAddress] = @Original_supplierEmailAddress) AND ([supplierTelephoneNo] = @Original_supplierTelephoneNo) AND ([status] = @Original_status))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplier_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplier_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplierName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplierEmailAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierEmailAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplierTelephoneNo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierTelephoneNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Supplier] ([supplierName], [supplierEmailAddress], [supplierTelephoneNo], [quantity], [status]) VALUES (@supplierName, @supplierEmailAddress, @supplierTelephoneNo, @quantity, @status);
-SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, quantity, status FROM Supplier WHERE (supplier_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Supplier] ([supplierName], [supplierEmailAddress], [supplierTelephoneNo], [status]) VALUES (@supplierName, @supplierEmailAddress, @supplierTelephoneNo, @status);
+SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, status FROM Supplier WHERE (supplier_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierEmailAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierEmailAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierTelephoneNo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierTelephoneNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Supplier] SET [supplierName] = @supplierName, [supplierEmailAddress] = @supplierEmailAddress, [supplierTelephoneNo] = @supplierTelephoneNo, [quantity] = @quantity, [status] = @status WHERE (([supplier_ID] = @Original_supplier_ID) AND ([supplierName] = @Original_supplierName) AND ([supplierEmailAddress] = @Original_supplierEmailAddress) AND ([supplierTelephoneNo] = @Original_supplierTelephoneNo) AND ([quantity] = @Original_quantity) AND ([status] = @Original_status));
-SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, quantity, status FROM Supplier WHERE (supplier_ID = @supplier_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Supplier] SET [supplierName] = @supplierName, [supplierEmailAddress] = @supplierEmailAddress, [supplierTelephoneNo] = @supplierTelephoneNo, [status] = @status WHERE (([supplier_ID] = @Original_supplier_ID) AND ([supplierName] = @Original_supplierName) AND ([supplierEmailAddress] = @Original_supplierEmailAddress) AND ([supplierTelephoneNo] = @Original_supplierTelephoneNo) AND ([status] = @Original_status));
+SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, status FROM Supplier WHERE (supplier_ID = @supplier_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierEmailAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierEmailAddress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierTelephoneNo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierTelephoneNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplier_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplier_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplierName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplierEmailAddress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierEmailAddress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_supplierTelephoneNo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierTelephoneNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_quantity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplier_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "supplier_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -7307,23 +7305,20 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, quan" +
-                "tity, status FROM dbo.Supplier";
+            this._commandCollection[0].CommandText = "SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, stat" +
+                "us FROM Supplier";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneN" +
-                "o, quantity, status\r\nFROM            Supplier\r\nWHERE        (supplierName LIKE @" +
-                "supplierName)";
+            this._commandCollection[1].CommandText = "SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, stat" +
+                "us FROM Supplier WHERE (supplierName LIKE @supplierName)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"
-
-INSERT INTO Supplier
+            this._commandCollection[2].CommandText = @"INSERT INTO Supplier
                          (supplierName, supplierEmailAddress, supplierTelephoneNo, status)
-VALUES        (@supplierName,@supplierEmailAddress,@supplierTelephoneNo,@status);  
+VALUES        (@supplierName,@supplierEmailAddress,@supplierTelephoneNo,@status); 
 SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, quantity, status FROM Supplier WHERE (supplier_ID = SCOPE_IDENTITY())";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7439,7 +7434,7 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_supplier_ID, string Original_supplierName, string Original_supplierEmailAddress, string Original_supplierTelephoneNo, int Original_quantity, string Original_status) {
+        public virtual int Delete(int Original_supplier_ID, string Original_supplierName, string Original_supplierEmailAddress, string Original_supplierTelephoneNo, string Original_status) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_supplier_ID));
             if ((Original_supplierName == null)) {
                 throw new global::System.ArgumentNullException("Original_supplierName");
@@ -7459,12 +7454,11 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_supplierTelephoneNo));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_quantity));
             if ((Original_status == null)) {
                 throw new global::System.ArgumentNullException("Original_status");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_status));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_status));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7486,7 +7480,7 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, int quantity, string status) {
+        public virtual int Insert(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, string status) {
             if ((supplierName == null)) {
                 throw new global::System.ArgumentNullException("supplierName");
             }
@@ -7505,12 +7499,11 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(supplierTelephoneNo));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(quantity));
             if ((status == null)) {
                 throw new global::System.ArgumentNullException("status");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(status));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(status));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7532,7 +7525,7 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, int quantity, string status, int Original_supplier_ID, string Original_supplierName, string Original_supplierEmailAddress, string Original_supplierTelephoneNo, int Original_quantity, string Original_status, int supplier_ID) {
+        public virtual int Update(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, string status, int Original_supplier_ID, string Original_supplierName, string Original_supplierEmailAddress, string Original_supplierTelephoneNo, string Original_status, int supplier_ID) {
             if ((supplierName == null)) {
                 throw new global::System.ArgumentNullException("supplierName");
             }
@@ -7551,40 +7544,38 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(supplierTelephoneNo));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(quantity));
             if ((status == null)) {
                 throw new global::System.ArgumentNullException("status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(status));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(status));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_supplier_ID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_supplier_ID));
             if ((Original_supplierName == null)) {
                 throw new global::System.ArgumentNullException("Original_supplierName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_supplierName));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_supplierName));
             }
             if ((Original_supplierEmailAddress == null)) {
                 throw new global::System.ArgumentNullException("Original_supplierEmailAddress");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_supplierEmailAddress));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_supplierEmailAddress));
             }
             if ((Original_supplierTelephoneNo == null)) {
                 throw new global::System.ArgumentNullException("Original_supplierTelephoneNo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_supplierTelephoneNo));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_supplierTelephoneNo));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_quantity));
             if ((Original_status == null)) {
                 throw new global::System.ArgumentNullException("Original_status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_status));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_status));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(supplier_ID));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(supplier_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7605,8 +7596,8 @@ SELECT supplier_ID, supplierName, supplierEmailAddress, supplierTelephoneNo, qua
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, int quantity, string status, int Original_supplier_ID, string Original_supplierName, string Original_supplierEmailAddress, string Original_supplierTelephoneNo, int Original_quantity, string Original_status) {
-            return this.Update(supplierName, supplierEmailAddress, supplierTelephoneNo, quantity, status, Original_supplier_ID, Original_supplierName, Original_supplierEmailAddress, Original_supplierTelephoneNo, Original_quantity, Original_status, Original_supplier_ID);
+        public virtual int Update(string supplierName, string supplierEmailAddress, string supplierTelephoneNo, string status, int Original_supplier_ID, string Original_supplierName, string Original_supplierEmailAddress, string Original_supplierTelephoneNo, string Original_status) {
+            return this.Update(supplierName, supplierEmailAddress, supplierTelephoneNo, status, Original_supplier_ID, Original_supplierName, Original_supplierEmailAddress, Original_supplierTelephoneNo, Original_status, Original_supplier_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7893,13 +7884,12 @@ SELECT productsID, supplierOrderID, quantity, amountPaid, supplierName FROM Supp
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"
-
-INSERT INTO Supplier_Order_Item
-                         (quantity, amountPaid, supplierName)
-VALUES        (@quantity,@amountPaid,@supplierName);  
+            this._commandCollection[2].CommandText = @"INSERT INTO Supplier_Order_Item
+                         (productsID, quantity, amountPaid, supplierName)
+VALUES        (@productsID,@quantity,@amountPaid,@supplierName); 
 SELECT productsID, supplierOrderID, quantity, amountPaid, supplierName FROM Supplier_Order_Item WHERE (supplierOrderID = SCOPE_IDENTITY())";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productsID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "productsID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amountPaid", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 0, "amountPaid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierName", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "supplierName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8108,15 +8098,16 @@ SELECT productsID, supplierOrderID, quantity, amountPaid, supplierName FROM Supp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(int quantity, decimal amountPaid, string supplierName) {
+        public virtual int InsertQuery(int productsID, int quantity, decimal amountPaid, string supplierName) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(quantity));
-            command.Parameters[1].Value = ((decimal)(amountPaid));
+            command.Parameters[0].Value = ((int)(productsID));
+            command.Parameters[1].Value = ((int)(quantity));
+            command.Parameters[2].Value = ((decimal)(amountPaid));
             if ((supplierName == null)) {
                 throw new global::System.ArgumentNullException("supplierName");
             }
             else {
-                command.Parameters[2].Value = ((string)(supplierName));
+                command.Parameters[3].Value = ((string)(supplierName));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

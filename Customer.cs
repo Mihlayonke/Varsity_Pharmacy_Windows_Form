@@ -524,5 +524,11 @@ namespace Varsity_Phamarcy
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            customersTableAdapter.DeleteQuery(int.Parse(customerID.Text));
+            customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
+            MessageBox.Show("Customer Deleted Successfully");
+        }
     }
 }

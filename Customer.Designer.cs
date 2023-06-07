@@ -107,6 +107,7 @@ namespace Varsity_Phamarcy
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Name = new System.Windows.Forms.TextBox();
             this.customersTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.CustomersTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
@@ -136,7 +137,7 @@ namespace Varsity_Phamarcy
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(10, 441);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 65);
+            this.button1.Size = new System.Drawing.Size(98, 65);
             this.button1.TabIndex = 10;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
@@ -146,9 +147,9 @@ namespace Varsity_Phamarcy
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(179, 441);
+            this.button3.Location = new System.Drawing.Point(110, 441);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 66);
+            this.button3.Size = new System.Drawing.Size(100, 66);
             this.button3.TabIndex = 12;
             this.button3.Text = "UPDATE";
             this.button3.UseVisualStyleBackColor = false;
@@ -557,6 +558,8 @@ namespace Varsity_Phamarcy
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -576,6 +579,7 @@ namespace Varsity_Phamarcy
             this.dataGridView1.DataSource = this.customersBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(332, 57);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(679, 378);
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
@@ -592,30 +596,35 @@ namespace Varsity_Phamarcy
             this.custFNameDataGridViewTextBoxColumn1.DataPropertyName = "custFName";
             this.custFNameDataGridViewTextBoxColumn1.HeaderText = "custFName";
             this.custFNameDataGridViewTextBoxColumn1.Name = "custFNameDataGridViewTextBoxColumn1";
+            this.custFNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // custLNameDataGridViewTextBoxColumn1
             // 
             this.custLNameDataGridViewTextBoxColumn1.DataPropertyName = "custLName";
             this.custLNameDataGridViewTextBoxColumn1.HeaderText = "custLName";
             this.custLNameDataGridViewTextBoxColumn1.Name = "custLNameDataGridViewTextBoxColumn1";
+            this.custLNameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // custEmailAddressDataGridViewTextBoxColumn1
             // 
             this.custEmailAddressDataGridViewTextBoxColumn1.DataPropertyName = "custEmailAddress";
             this.custEmailAddressDataGridViewTextBoxColumn1.HeaderText = "custEmailAddress";
             this.custEmailAddressDataGridViewTextBoxColumn1.Name = "custEmailAddressDataGridViewTextBoxColumn1";
+            this.custEmailAddressDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // custIDNumberDataGridViewTextBoxColumn1
             // 
             this.custIDNumberDataGridViewTextBoxColumn1.DataPropertyName = "custIDNumber";
             this.custIDNumberDataGridViewTextBoxColumn1.HeaderText = "custIDNumber";
             this.custIDNumberDataGridViewTextBoxColumn1.Name = "custIDNumberDataGridViewTextBoxColumn1";
+            this.custIDNumberDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "custAge";
             this.dataGridViewTextBoxColumn13.HeaderText = "custAge";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
             this.dataGridViewTextBoxColumn13.Visible = false;
             // 
             // dataGridViewTextBoxColumn14
@@ -623,12 +632,14 @@ namespace Varsity_Phamarcy
             this.dataGridViewTextBoxColumn14.DataPropertyName = "custPhoneNumber";
             this.dataGridViewTextBoxColumn14.HeaderText = "custPhoneNumber";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "custGender";
             this.dataGridViewTextBoxColumn15.HeaderText = "custGender";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
             this.dataGridViewTextBoxColumn15.Visible = false;
             // 
             // dataGridViewTextBoxColumn16
@@ -636,12 +647,14 @@ namespace Varsity_Phamarcy
             this.dataGridViewTextBoxColumn16.DataPropertyName = "medicalAidNumber";
             this.dataGridViewTextBoxColumn16.HeaderText = "medicalAidNumber";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             // 
             // medicalAidNameDataGridViewTextBoxColumn
             // 
             this.medicalAidNameDataGridViewTextBoxColumn.DataPropertyName = "MedicalAidName";
             this.medicalAidNameDataGridViewTextBoxColumn.HeaderText = "MedicalAidName";
             this.medicalAidNameDataGridViewTextBoxColumn.Name = "medicalAidNameDataGridViewTextBoxColumn";
+            this.medicalAidNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.medicalAidNameDataGridViewTextBoxColumn.Visible = false;
             // 
             // statusDataGridViewTextBoxColumn
@@ -649,6 +662,7 @@ namespace Varsity_Phamarcy
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customersBindingSource1
             // 
@@ -718,6 +732,18 @@ namespace Varsity_Phamarcy
             // 
             this.customersTableAdapter.ClearBeforeFill = true;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(216, 441);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 66);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "DELETE";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -727,6 +753,7 @@ namespace Varsity_Phamarcy
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1023, 531);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Gend);
@@ -853,5 +880,6 @@ namespace Varsity_Phamarcy
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicalAidNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
     }
 }
