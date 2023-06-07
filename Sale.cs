@@ -21,7 +21,7 @@ namespace Varsity_Phamarcy
         List<int> product1 = new List<int>();
         List<int> quantityy = new List<int>();
         List<decimal> pricee = new List<decimal>();
-        LOGIN log = new LOGIN();
+        Login log = new Login();
         
 
         public Sale()

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace Varsity_Phamarcy
 {
-    public partial class LOGIN : Form
+    public partial class Login : Form
     {
         public static string Username;
         public static string password;
 
-        public LOGIN()
+        public Login()
         {
             InitializeComponent();
         }
@@ -86,7 +86,7 @@ namespace Varsity_Phamarcy
         private void button1_Click_1(object sender, EventArgs e)
         {
 
-            HelpLog log = new HelpLog();
+            HelpLogin log = new HelpLogin();
             this.Hide();
             log.Show();
         }

@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Varsity_Phamarcy
 {
-    public partial class HelpLog : Form
+    public partial class HelpLogin : Form
     {
-        public HelpLog()
+        public HelpLogin()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LOGIN log = new LOGIN();
+            Login log = new Login();
             this.Hide();
             log.Show();
         }

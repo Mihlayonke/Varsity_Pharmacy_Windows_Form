@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace Varsity_Phamarcy
 {
-    public partial class ManageUsers : Form
+    public partial class Users : Form
     {
 
         public string Status;
 
-        public ManageUsers()
+        public Users()
         {
             InitializeComponent();
         }
@@ -409,6 +409,11 @@ namespace Varsity_Phamarcy
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

@@ -40,7 +40,7 @@ namespace Varsity_Phamarcy
 
         private void lbUsers_Click(object sender, EventArgs e)
         {
-            ManageUsers staff = new ManageUsers();
+            Users staff = new Users();
             this.Hide();
             staff.Show();
         }
@@ -55,7 +55,7 @@ namespace Varsity_Phamarcy
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            LOGIN log = new LOGIN();
+            Login log = new Login();
             this.Hide();
             log.Show();
         }
