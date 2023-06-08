@@ -437,5 +437,17 @@ namespace Varsity_Phamarcy
                 MessageBox.Show("Cenceled To Delete Staff!");
             }
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Products1 products = new Products1();
+            this.Hide();
+            products.Show();
+        }
     }
 }

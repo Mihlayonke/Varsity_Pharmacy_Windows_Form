@@ -631,11 +631,11 @@ namespace Varsity_Phamarcy
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Green;
-            this.button5.Location = new System.Drawing.Point(414, 398);
+            this.button5.Location = new System.Drawing.Point(414, 382);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 51);
+            this.button5.Size = new System.Drawing.Size(111, 67);
             this.button5.TabIndex = 30;
             this.button5.Text = "Order New Products";
             this.button5.UseVisualStyleBackColor = true;
@@ -662,11 +662,11 @@ namespace Varsity_Phamarcy
             // 
             // button13
             // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.Green;
             this.button13.Location = new System.Drawing.Point(414, 82);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(94, 53);
+            this.button13.Size = new System.Drawing.Size(111, 60);
             this.button13.TabIndex = 27;
             this.button13.Text = "Add New Customer";
             this.button13.UseVisualStyleBackColor = true;
@@ -676,9 +676,9 @@ namespace Varsity_Phamarcy
             // 
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Location = new System.Drawing.Point(41, 221);
+            this.groupBox2.Location = new System.Drawing.Point(65, 221);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 57);
+            this.groupBox2.Size = new System.Drawing.Size(253, 49);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search Customer";
@@ -695,9 +695,9 @@ namespace Varsity_Phamarcy
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(110, 22);
+            this.textBox4.Location = new System.Drawing.Point(87, 22);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(217, 20);
+            this.textBox4.Size = new System.Drawing.Size(152, 20);
             this.textBox4.TabIndex = 3;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -772,9 +772,9 @@ namespace Varsity_Phamarcy
             // 
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.search);
-            this.groupBox1.Location = new System.Drawing.Point(41, 527);
+            this.groupBox1.Location = new System.Drawing.Point(65, 522);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(353, 53);
+            this.groupBox1.Size = new System.Drawing.Size(244, 47);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Products";
@@ -791,9 +791,9 @@ namespace Varsity_Phamarcy
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(118, 19);
+            this.search.Location = new System.Drawing.Point(87, 19);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(217, 20);
+            this.search.Size = new System.Drawing.Size(152, 20);
             this.search.TabIndex = 3;
             this.search.TextChanged += new System.EventHandler(this.search_TextChanged);
             // 

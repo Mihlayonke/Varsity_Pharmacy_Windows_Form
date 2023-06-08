@@ -39,7 +39,6 @@ namespace Varsity_Phamarcy
             this.supplierOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierOrderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.varsityPharmacyDataSet = new Varsity_Phamarcy.VarsityPharmacyDataSet();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -70,7 +69,6 @@ namespace Varsity_Phamarcy
             this.suppName = new System.Windows.Forms.TextBox();
             this.prodName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -109,6 +107,7 @@ namespace Varsity_Phamarcy
             this.productsTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.ProductsTableAdapter();
             this.supplier_Order_ItemTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.Supplier_Order_ItemTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierOrderItemBindingSource)).BeginInit();
@@ -117,7 +116,6 @@ namespace Varsity_Phamarcy
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -134,8 +132,8 @@ namespace Varsity_Phamarcy
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.dataGridView4);
-            this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -157,14 +155,14 @@ namespace Varsity_Phamarcy
             this.tabPage2.Controls.Add(this.suppName);
             this.tabPage2.Controls.Add(this.prodName);
             this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(982, 502);
+            this.tabPage2.Size = new System.Drawing.Size(982, 582);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Order Products";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // dataGridView4
             // 
@@ -179,7 +177,7 @@ namespace Varsity_Phamarcy
             this.supplierNameDataGridViewTextBoxColumn1,
             this.supplierOrderID});
             this.dataGridView4.DataSource = this.supplierOrderItemBindingSource;
-            this.dataGridView4.Location = new System.Drawing.Point(16, 248);
+            this.dataGridView4.Location = new System.Drawing.Point(16, 287);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.Size = new System.Drawing.Size(445, 150);
@@ -224,14 +222,6 @@ namespace Varsity_Phamarcy
             this.varsityPharmacyDataSet.DataSetName = "VarsityPharmacyDataSet";
             this.varsityPharmacyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(0, 491);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 19);
-            this.panel1.TabIndex = 44;
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(412, 198);
@@ -244,11 +234,11 @@ namespace Varsity_Phamarcy
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Green;
-            this.button3.Location = new System.Drawing.Point(432, 431);
+            this.button3.Location = new System.Drawing.Point(477, 344);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 54);
+            this.button3.Size = new System.Drawing.Size(139, 54);
             this.button3.TabIndex = 57;
-            this.button3.Text = "Check Products";
+            this.button3.Text = "Check Ordered Products";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -257,7 +247,7 @@ namespace Varsity_Phamarcy
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(467, 306);
+            this.groupBox3.Location = new System.Drawing.Point(83, 466);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(245, 48);
             this.groupBox3.TabIndex = 56;
@@ -305,7 +295,7 @@ namespace Varsity_Phamarcy
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(176, 229);
+            this.label9.Location = new System.Drawing.Point(182, 268);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 16);
             this.label9.TabIndex = 53;
@@ -315,20 +305,20 @@ namespace Varsity_Phamarcy
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 408);
+            this.label7.Location = new System.Drawing.Point(45, 443);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 16);
+            this.label7.Size = new System.Drawing.Size(134, 16);
             this.label7.TabIndex = 52;
-            this.label7.Text = "Supplier Name";
+            this.label7.Text = "Selected Supplier";
             // 
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.Color.Yellow;
             this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cancel.Location = new System.Drawing.Point(626, 431);
+            this.cancel.Location = new System.Drawing.Point(630, 501);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(131, 54);
+            this.cancel.Size = new System.Drawing.Size(131, 73);
             this.cancel.TabIndex = 51;
             this.cancel.Text = "BACK";
             this.cancel.UseVisualStyleBackColor = false;
@@ -338,7 +328,7 @@ namespace Varsity_Phamarcy
             // 
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(30, 431);
+            this.button11.Location = new System.Drawing.Point(34, 520);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(133, 54);
             this.button11.TabIndex = 50;
@@ -348,10 +338,10 @@ namespace Varsity_Phamarcy
             // 
             // list
             // 
-            this.list.Location = new System.Drawing.Point(718, 26);
+            this.list.Location = new System.Drawing.Point(649, 26);
             this.list.Multiline = true;
             this.list.Name = "list";
-            this.list.Size = new System.Drawing.Size(240, 328);
+            this.list.Size = new System.Drawing.Size(309, 370);
             this.list.TabIndex = 49;
             this.list.TextChanged += new System.EventHandler(this.list_TextChanged);
             // 
@@ -360,7 +350,7 @@ namespace Varsity_Phamarcy
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.textBox12);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(467, 83);
+            this.groupBox2.Location = new System.Drawing.Point(91, 212);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(245, 52);
             this.groupBox2.TabIndex = 48;
@@ -389,9 +379,9 @@ namespace Varsity_Phamarcy
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(816, 431);
+            this.button10.Location = new System.Drawing.Point(820, 501);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(142, 54);
+            this.button10.Size = new System.Drawing.Size(142, 73);
             this.button10.TabIndex = 47;
             this.button10.Text = "HOME";
             this.button10.UseVisualStyleBackColor = false;
@@ -454,18 +444,18 @@ namespace Varsity_Phamarcy
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(715, 382);
+            this.label1.Location = new System.Drawing.Point(647, 421);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 16);
             this.label1.TabIndex = 43;
-            this.label1.Text = "Total Cost : R";
+            this.label1.Text = "Total Cost, R:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Red;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(231, 431);
+            this.button5.Location = new System.Drawing.Point(235, 520);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(128, 54);
             this.button5.TabIndex = 41;
@@ -474,10 +464,9 @@ namespace Varsity_Phamarcy
             // 
             // totalBox
             // 
-            this.totalBox.Location = new System.Drawing.Point(816, 379);
-            this.totalBox.Multiline = true;
+            this.totalBox.Location = new System.Drawing.Point(761, 418);
             this.totalBox.Name = "totalBox";
-            this.totalBox.Size = new System.Drawing.Size(140, 23);
+            this.totalBox.Size = new System.Drawing.Size(44, 21);
             this.totalBox.TabIndex = 39;
             // 
             // textBox9
@@ -490,62 +479,53 @@ namespace Varsity_Phamarcy
             // 
             // quantBox
             // 
-            this.quantBox.Location = new System.Drawing.Point(310, 185);
+            this.quantBox.Location = new System.Drawing.Point(911, 418);
             this.quantBox.Name = "quantBox";
-            this.quantBox.Size = new System.Drawing.Size(45, 21);
+            this.quantBox.Size = new System.Drawing.Size(47, 21);
             this.quantBox.TabIndex = 34;
             // 
             // suppName
             // 
-            this.suppName.Location = new System.Drawing.Point(151, 404);
+            this.suppName.Location = new System.Drawing.Point(185, 443);
             this.suppName.Name = "suppName";
             this.suppName.Size = new System.Drawing.Size(179, 21);
             this.suppName.TabIndex = 32;
             // 
             // prodName
             // 
-            this.prodName.Location = new System.Drawing.Point(97, 185);
+            this.prodName.Location = new System.Drawing.Point(185, 182);
             this.prodName.Name = "prodName";
-            this.prodName.Size = new System.Drawing.Size(151, 21);
+            this.prodName.Size = new System.Drawing.Size(178, 21);
             this.prodName.TabIndex = 30;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(254, 188);
+            this.label8.Location = new System.Drawing.Point(804, 421);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 16);
+            this.label8.Size = new System.Drawing.Size(101, 16);
             this.label8.TabIndex = 37;
-            this.label8.Text = "Packs";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(16, 248);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(343, 150);
-            this.dataGridView2.TabIndex = 33;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.label8.Text = "Totoal Packs";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 188);
+            this.label6.Location = new System.Drawing.Point(50, 184);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.Size = new System.Drawing.Size(129, 16);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Selected";
+            this.label6.Text = "Selected Product";
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(778, 436);
+            this.button7.Location = new System.Drawing.Point(821, 477);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 53);
+            this.button7.Size = new System.Drawing.Size(142, 78);
             this.button7.TabIndex = 43;
             this.button7.Text = "HOME";
             this.button7.UseVisualStyleBackColor = false;
@@ -578,7 +558,7 @@ namespace Varsity_Phamarcy
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(982, 502);
+            this.tabPage1.Size = new System.Drawing.Size(982, 582);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = " Manage_Supplier";
             // 
@@ -586,7 +566,7 @@ namespace Varsity_Phamarcy
             // 
             this.button6.BackColor = System.Drawing.Color.Red;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(301, 434);
+            this.button6.Location = new System.Drawing.Point(216, 495);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(105, 55);
             this.button6.TabIndex = 52;
@@ -599,7 +579,7 @@ namespace Varsity_Phamarcy
             this.groupBox4.Controls.Add(this.radioButton1);
             this.groupBox4.Controls.Add(this.radioButton4);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(567, 371);
+            this.groupBox4.Location = new System.Drawing.Point(6, 332);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(331, 54);
             this.groupBox4.TabIndex = 51;
@@ -634,7 +614,7 @@ namespace Varsity_Phamarcy
             // 
             // Phone
             // 
-            this.Phone.Location = new System.Drawing.Point(174, 400);
+            this.Phone.Location = new System.Drawing.Point(100, 252);
             this.Phone.Mask = "+27000000000";
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(232, 21);
@@ -644,9 +624,9 @@ namespace Varsity_Phamarcy
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(567, 437);
+            this.button4.Location = new System.Drawing.Point(659, 477);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 54);
+            this.button4.Size = new System.Drawing.Size(144, 78);
             this.button4.TabIndex = 47;
             this.button4.Text = "ORDER PRODUCT";
             this.button4.UseVisualStyleBackColor = false;
@@ -656,9 +636,9 @@ namespace Varsity_Phamarcy
             // 
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.searchBox);
-            this.groupBox1.Location = new System.Drawing.Point(567, 282);
+            this.groupBox1.Location = new System.Drawing.Point(344, 492);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 56);
+            this.groupBox1.Size = new System.Drawing.Size(309, 56);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search By Name";
@@ -674,9 +654,9 @@ namespace Varsity_Phamarcy
             // 
             // searchBox
             // 
-            this.searchBox.Location = new System.Drawing.Point(105, 17);
+            this.searchBox.Location = new System.Drawing.Point(83, 20);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(220, 21);
+            this.searchBox.Size = new System.Drawing.Size(185, 21);
             this.searchBox.TabIndex = 45;
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
@@ -692,7 +672,7 @@ namespace Varsity_Phamarcy
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(94, 344);
+            this.label12.Location = new System.Drawing.Point(20, 168);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 18);
             this.label12.TabIndex = 31;
@@ -710,7 +690,7 @@ namespace Varsity_Phamarcy
             // 
             this.button2.BackColor = System.Drawing.Color.Yellow;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(192, 435);
+            this.button2.Location = new System.Drawing.Point(107, 496);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 55);
             this.button2.TabIndex = 26;
@@ -722,7 +702,7 @@ namespace Varsity_Phamarcy
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(86, 436);
+            this.button1.Location = new System.Drawing.Point(1, 497);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 57);
             this.button1.TabIndex = 25;
@@ -734,7 +714,7 @@ namespace Varsity_Phamarcy
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(83, 403);
+            this.label4.Location = new System.Drawing.Point(9, 255);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 18);
             this.label4.TabIndex = 23;
@@ -751,7 +731,7 @@ namespace Varsity_Phamarcy
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(94, 282);
+            this.label2.Location = new System.Drawing.Point(20, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 18);
             this.label2.TabIndex = 21;
@@ -767,14 +747,14 @@ namespace Varsity_Phamarcy
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(174, 342);
+            this.Email.Location = new System.Drawing.Point(100, 166);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(232, 21);
             this.Email.TabIndex = 18;
             // 
             // NameS
             // 
-            this.NameS.Location = new System.Drawing.Point(174, 280);
+            this.NameS.Location = new System.Drawing.Point(100, 72);
             this.NameS.Name = "NameS";
             this.NameS.Size = new System.Drawing.Size(232, 21);
             this.NameS.TabIndex = 17;
@@ -795,10 +775,10 @@ namespace Varsity_Phamarcy
             this.supplierTelephoneNoDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.supplierBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(215, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(357, 49);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 227);
+            this.dataGridView1.Size = new System.Drawing.Size(620, 349);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -855,7 +835,7 @@ namespace Varsity_Phamarcy
             this.Manage_Supplier.Location = new System.Drawing.Point(8, 62);
             this.Manage_Supplier.Name = "Manage_Supplier";
             this.Manage_Supplier.SelectedIndex = 0;
-            this.Manage_Supplier.Size = new System.Drawing.Size(990, 530);
+            this.Manage_Supplier.Size = new System.Drawing.Size(990, 610);
             this.Manage_Supplier.TabIndex = 31;
             // 
             // panel2
@@ -867,7 +847,7 @@ namespace Varsity_Phamarcy
             this.panel2.Controls.Add(this.label10);
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1042, 54);
+            this.panel2.Size = new System.Drawing.Size(1023, 54);
             this.panel2.TabIndex = 45;
             // 
             // label10
@@ -896,10 +876,22 @@ namespace Varsity_Phamarcy
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(2, 598);
+            this.panel3.Location = new System.Drawing.Point(2, 678);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1025, 18);
             this.panel3.TabIndex = 52;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Green;
+            this.button8.Location = new System.Drawing.Point(477, 83);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(139, 54);
+            this.button8.TabIndex = 60;
+            this.button8.Text = "Add New Products";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Suppliers
             // 
@@ -908,7 +900,7 @@ namespace Varsity_Phamarcy
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1024, 612);
+            this.ClientSize = new System.Drawing.Size(1005, 696);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Manage_Supplier);
@@ -930,7 +922,6 @@ namespace Varsity_Phamarcy
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -956,7 +947,6 @@ namespace Varsity_Phamarcy
         private System.Windows.Forms.TextBox suppName;
         private System.Windows.Forms.TextBox prodName;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TabPage tabPage1;
@@ -971,7 +961,6 @@ namespace Varsity_Phamarcy
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl Manage_Supplier;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         
@@ -1030,5 +1019,6 @@ namespace Varsity_Phamarcy
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
     }
 }
