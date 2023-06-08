@@ -33,7 +33,3 @@ store payment in the data store, receive payment from the customer, calculate th
 available show products. The capture payment system will be able to capture the order details from 
 the data store and capture the payment. The whole system will consist of three entities which are the 
 customer, staff, and supplier.
-
-The whole project will take about approximately 7-8 months to complete. The tools to develop this 
-system will be MS Visio to estimate time and have better time management. Visual Basic to develop 
-the whole system.
