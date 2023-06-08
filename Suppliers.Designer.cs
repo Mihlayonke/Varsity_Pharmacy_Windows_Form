@@ -523,9 +523,9 @@ namespace Varsity_Phamarcy
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(821, 477);
+            this.button7.Location = new System.Drawing.Point(821, 483);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(142, 78);
+            this.button7.Size = new System.Drawing.Size(142, 66);
             this.button7.TabIndex = 43;
             this.button7.Text = "HOME";
             this.button7.UseVisualStyleBackColor = false;
@@ -624,9 +624,9 @@ namespace Varsity_Phamarcy
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(659, 477);
+            this.button4.Location = new System.Drawing.Point(659, 483);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 78);
+            this.button4.Size = new System.Drawing.Size(144, 66);
             this.button4.TabIndex = 47;
             this.button4.Text = "ORDER PRODUCT";
             this.button4.UseVisualStyleBackColor = false;
