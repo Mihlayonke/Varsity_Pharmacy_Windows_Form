@@ -110,9 +110,9 @@ namespace Varsity_Phamarcy
             this.lbUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsers.Location = new System.Drawing.Point(35, 126);
             this.lbUsers.Name = "lbUsers";
-            this.lbUsers.Size = new System.Drawing.Size(89, 25);
+            this.lbUsers.Size = new System.Drawing.Size(84, 25);
             this.lbUsers.TabIndex = 6;
-            this.lbUsers.Text = "USERS";
+            this.lbUsers.Text = "STAFF";
             this.lbUsers.Click += new System.EventHandler(this.lbUsers_Click);
             // 
             // button1
@@ -121,9 +121,9 @@ namespace Varsity_Phamarcy
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(564, 467);
+            this.button1.Location = new System.Drawing.Point(564, 439);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 48);
+            this.button1.Size = new System.Drawing.Size(125, 76);
             this.button1.TabIndex = 7;
             this.button1.Text = "EXIT";
             this.button1.UseVisualStyleBackColor = false;
@@ -134,11 +134,11 @@ namespace Varsity_Phamarcy
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(821, 351);
+            this.label2.Location = new System.Drawing.Point(719, 351);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 25);
+            this.label2.Size = new System.Drawing.Size(286, 25);
             this.label2.TabIndex = 8;
-            this.label2.Text = "SUPPLIERS";
+            this.label2.Text = "SUPPLIERS and ORDERS";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel2
@@ -155,9 +155,9 @@ namespace Varsity_Phamarcy
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Green;
-            this.button2.Location = new System.Drawing.Point(322, 467);
+            this.button2.Location = new System.Drawing.Point(322, 439);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 48);
+            this.button2.Size = new System.Drawing.Size(130, 76);
             this.button2.TabIndex = 10;
             this.button2.Text = "HELP";
             this.button2.UseVisualStyleBackColor = false;

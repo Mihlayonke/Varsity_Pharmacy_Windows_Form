@@ -259,7 +259,7 @@ namespace Varsity_Phamarcy
             string name = prodName.Text;
             decimal price = decimal.Parse(dataGridView3.CurrentRow.Cells[2].Value.ToString());
             Id = int.Parse(dataGridView3.CurrentRow.Cells[3].Value.ToString());
-            list.Text += " ==== " + name + " ---> R" + price + " ====";
+            list.Text += " ==== " + name + " ---> R" + price + " \r\n";
         }
 
         private void textBox12_TextChanged_2(object sender, EventArgs e)
@@ -412,6 +412,30 @@ namespace Varsity_Phamarcy
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Do You Want To Delete Staff ?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+
+                try
+                {
+                    this.supplierTableAdapter.DeleteQuery(int.Parse(suppID.Text));
+                    this.supplierTableAdapter.Fill(this.varsityPharmacyDataSet1.Supplier);
+                    MessageBox.Show("Supplier Is Deleted Successfully!");
+                }
+                catch
+                {
+                    MessageBox.Show("Error While Deleting Supplier!");
+                }
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Cenceled To Delete Staff!");
+            }
         }
     }
 }

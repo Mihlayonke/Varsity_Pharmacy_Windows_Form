@@ -119,20 +119,20 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 173</value>
+    <value>272, 173</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 19</value>
+    <value>112, 19</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>USERNAME</value>
+    <value>USERNAME </value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -147,13 +147,13 @@
     <value>7</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 11.25pt, style=Bold</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 254</value>
+    <value>272, 255</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 19</value>
+    <value>112, 19</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -173,11 +173,14 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="txtUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
   <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 170</value>
   </data>
   <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -194,6 +197,9 @@
   <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="txtPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
   <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>390, 252</value>
   </data>
@@ -201,7 +207,7 @@
     <value>*</value>
   </data>
   <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>321, 20</value>
+    <value>321, 22</value>
   </data>
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -376,7 +382,7 @@
     <value>493, 4</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 16</value>
+    <value>46, 16</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -462,7 +468,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAw8AAAG5CAYAAADI0AiXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAA/7JJREFUeF7sfQd8HdWZ/WvqspolW7LVrd6Le+82uGBsMG7YBmODscGYZuOCjXvv
+        vwAADr8BOAVTJAAA/7JJREFUeF7sfQd8HdWZ/WvqspolW7LVrd6Le+82uGBsMG7YBmODscGYZuOCjXvv
         lgQkQJJN2U3btP9ms5vdzSabTW+bsultQ0hCQkICofM/59O7k5l586QnWTIu39Hv/G6ZO3305jvz3e9e
         n0KhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQ
         KBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqF

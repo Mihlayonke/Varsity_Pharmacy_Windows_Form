@@ -647,7 +647,7 @@ namespace Varsity_Phamarcy
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(234, 497);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 16);
+            this.label8.Size = new System.Drawing.Size(110, 16);
             this.label8.TabIndex = 29;
             this.label8.Text = "Price each, R:";
             // 
@@ -712,10 +712,10 @@ namespace Varsity_Phamarcy
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(341, 496);
+            this.textBox1.Location = new System.Drawing.Point(345, 496);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(31, 20);
+            this.textBox1.Size = new System.Drawing.Size(47, 20);
             this.textBox1.TabIndex = 24;
             // 
             // button10
@@ -732,18 +732,19 @@ namespace Varsity_Phamarcy
             // 
             // QtyBox
             // 
-            this.QtyBox.Location = new System.Drawing.Point(475, 493);
+            this.QtyBox.Location = new System.Drawing.Point(875, 412);
+            this.QtyBox.Multiline = true;
             this.QtyBox.Name = "QtyBox";
-            this.QtyBox.Size = new System.Drawing.Size(33, 20);
+            this.QtyBox.Size = new System.Drawing.Size(57, 19);
             this.QtyBox.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(379, 496);
+            this.label2.Location = new System.Drawing.Point(777, 415);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 21;
             this.label2.Text = "Total Packs";
             // 
@@ -784,7 +785,7 @@ namespace Varsity_Phamarcy
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(33, 19);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 16);
+            this.label15.Size = new System.Drawing.Size(49, 16);
             this.label15.TabIndex = 4;
             this.label15.Text = "Name";
             // 
@@ -813,30 +814,29 @@ namespace Varsity_Phamarcy
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(619, 430);
+            this.label17.Location = new System.Drawing.Point(599, 415);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(105, 16);
+            this.label17.Size = new System.Drawing.Size(112, 16);
             this.label17.TabIndex = 16;
-            this.label17.Text = "TOTAL PRICE";
+            this.label17.Text = "Total Price, R:";
             // 
             // total
             // 
             this.total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total.Location = new System.Drawing.Point(751, 412);
+            this.total.Location = new System.Drawing.Point(715, 412);
             this.total.Multiline = true;
             this.total.Name = "total";
             this.total.ReadOnly = true;
-            this.total.Size = new System.Drawing.Size(174, 43);
+            this.total.Size = new System.Drawing.Size(56, 19);
             this.total.TabIndex = 15;
             // 
             // productName
             // 
-            this.productName.Location = new System.Drawing.Point(87, 496);
+            this.productName.Location = new System.Drawing.Point(108, 496);
             this.productName.Name = "productName";
             this.productName.ReadOnly = true;
-            this.productName.Size = new System.Drawing.Size(141, 20);
+            this.productName.Size = new System.Drawing.Size(120, 20);
             this.productName.TabIndex = 13;
-            this.productName.TextChanged += new System.EventHandler(this.productName_TextChanged);
             // 
             // list
             // 
@@ -859,9 +859,9 @@ namespace Varsity_Phamarcy
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(3, 497);
+            this.label16.Location = new System.Drawing.Point(8, 497);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 16);
+            this.label16.Size = new System.Drawing.Size(94, 16);
             this.label16.TabIndex = 14;
             this.label16.Text = "SELECTED";
             // 
@@ -871,7 +871,7 @@ namespace Varsity_Phamarcy
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(62, 199);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 16);
+            this.label14.Size = new System.Drawing.Size(94, 16);
             this.label14.TabIndex = 9;
             this.label14.Text = "SELECTED";
             // 
@@ -881,7 +881,7 @@ namespace Varsity_Phamarcy
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(724, 20);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 16);
+            this.label13.Size = new System.Drawing.Size(97, 16);
             this.label13.TabIndex = 7;
             this.label13.Text = "ITEMS LIST";
             // 
@@ -891,7 +891,7 @@ namespace Varsity_Phamarcy
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(125, 303);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(143, 16);
+            this.label12.Size = new System.Drawing.Size(157, 16);
             this.label12.TabIndex = 6;
             this.label12.Text = "SELECT PRODUCT";
             // 
@@ -901,7 +901,7 @@ namespace Varsity_Phamarcy
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(125, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 16);
+            this.label10.Size = new System.Drawing.Size(169, 16);
             this.label10.TabIndex = 4;
             this.label10.Text = "SELECT CUSTOMER";
             // 

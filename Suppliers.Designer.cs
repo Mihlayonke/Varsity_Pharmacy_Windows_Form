@@ -74,6 +74,7 @@ namespace Varsity_Phamarcy
             this.label6 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
@@ -286,7 +287,7 @@ namespace Varsity_Phamarcy
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(774, 7);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 16);
+            this.label14.Size = new System.Drawing.Size(106, 16);
             this.label14.TabIndex = 55;
             this.label14.Text = "ORDER LIST";
             // 
@@ -296,7 +297,7 @@ namespace Varsity_Phamarcy
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(160, 7);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(153, 16);
+            this.label13.Size = new System.Drawing.Size(168, 16);
             this.label13.TabIndex = 54;
             this.label13.Text = "SELECT PRODUCTS";
             // 
@@ -306,7 +307,7 @@ namespace Varsity_Phamarcy
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(176, 229);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 16);
+            this.label9.Size = new System.Drawing.Size(140, 16);
             this.label9.TabIndex = 53;
             this.label9.Text = "ORDER DETAILS";
             // 
@@ -316,7 +317,7 @@ namespace Varsity_Phamarcy
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(34, 408);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 16);
+            this.label7.Size = new System.Drawing.Size(113, 16);
             this.label7.TabIndex = 52;
             this.label7.Text = "Supplier Name";
             // 
@@ -455,7 +456,7 @@ namespace Varsity_Phamarcy
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(715, 382);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.Size = new System.Drawing.Size(108, 16);
             this.label1.TabIndex = 43;
             this.label1.Text = "Total Cost : R";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -514,7 +515,7 @@ namespace Varsity_Phamarcy
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(254, 188);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 16);
+            this.label8.Size = new System.Drawing.Size(51, 16);
             this.label8.TabIndex = 37;
             this.label8.Text = "Packs";
             // 
@@ -533,7 +534,7 @@ namespace Varsity_Phamarcy
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(27, 188);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 16);
+            this.label6.Size = new System.Drawing.Size(70, 16);
             this.label6.TabIndex = 31;
             this.label6.Text = "Selected";
             // 
@@ -556,6 +557,7 @@ namespace Varsity_Phamarcy
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.Phone);
             this.tabPage1.Controls.Add(this.button4);
@@ -580,6 +582,18 @@ namespace Varsity_Phamarcy
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = " Manage_Supplier";
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(301, 434);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(105, 55);
+            this.button6.TabIndex = 52;
+            this.button6.Text = "DELETE";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.radioButton1);
@@ -598,7 +612,7 @@ namespace Varsity_Phamarcy
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(49, 20);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 20);
+            this.radioButton1.Size = new System.Drawing.Size(82, 20);
             this.radioButton1.TabIndex = 49;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Activate";
@@ -611,7 +625,7 @@ namespace Varsity_Phamarcy
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.Location = new System.Drawing.Point(200, 21);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(100, 20);
+            this.radioButton4.Size = new System.Drawing.Size(101, 20);
             this.radioButton4.TabIndex = 50;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Deactivate";
@@ -696,9 +710,9 @@ namespace Varsity_Phamarcy
             // 
             this.button2.BackColor = System.Drawing.Color.Yellow;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(295, 435);
+            this.button2.Location = new System.Drawing.Point(192, 435);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 55);
+            this.button2.Size = new System.Drawing.Size(103, 55);
             this.button2.TabIndex = 26;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = false;
@@ -708,9 +722,9 @@ namespace Varsity_Phamarcy
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(65, 436);
+            this.button1.Location = new System.Drawing.Point(86, 436);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 57);
+            this.button1.Size = new System.Drawing.Size(100, 57);
             this.button1.TabIndex = 25;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
@@ -861,11 +875,11 @@ namespace Varsity_Phamarcy
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(323, 7);
+            this.label10.Location = new System.Drawing.Point(177, 7);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(415, 42);
+            this.label10.Size = new System.Drawing.Size(669, 42);
             this.label10.TabIndex = 22;
-            this.label10.Text = "MANAGE SUPPLIERS";
+            this.label10.Text = "MANAGE SUPPLIERS and ORDERS";
             // 
             // supplierTableAdapter
             // 
@@ -1015,5 +1029,6 @@ namespace Varsity_Phamarcy
         private System.Windows.Forms.DataGridViewTextBoxColumn costPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button6;
     }
 }

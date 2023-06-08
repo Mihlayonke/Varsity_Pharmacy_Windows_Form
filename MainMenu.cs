@@ -40,7 +40,7 @@ namespace Varsity_Phamarcy
 
         private void lbUsers_Click(object sender, EventArgs e)
         {
-            Users staff = new Users();
+            Staff staff = new Staff();
             this.Hide();
             staff.Show();
         }

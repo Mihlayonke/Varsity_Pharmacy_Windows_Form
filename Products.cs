@@ -17,7 +17,7 @@ namespace Varsity_Phamarcy
     {
         //private string categoryID;
         Suppliers suppliers1 = new Suppliers();
-  
+        string Id;
         string status;
         public int Quant;
 
@@ -38,57 +38,74 @@ namespace Varsity_Phamarcy
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Do You Want To Update Product ?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
             {
-                if (radioButton1.Checked == true)
+
+                try
                 {
-                    status = "Available";
+                    if (radioButton1.Checked == true)
+                    {
+                        status = "Available";
+                    }
+                    else
+                    {
+                        status = "Unavailable";
+                    }
+                    productsTableAdapter.UpdateQuery(productName.Text, Convert.ToInt32(productQuantity.Text), Convert.ToDecimal(productSale.Text), Convert.ToDecimal(productCost.Text), status, productCategory.Text, Int32.Parse(productID.Text), Int32.Parse(productID.Text));
+                    productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
+                    productID.Text = "";
+                    productName.Text = "";
+                    productQuantity.Text = "";
+                    productCost.Text = "";
+                    productSale.Text = "";
+                    productCategory.Text = "";
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = false;
+                    MessageBox.Show("Updated");
                 }
-                else
+                catch
                 {
-                    status = "Unavailable";
+                    MessageBox.Show("Error While Updating");
                 }
-                productsTableAdapter.UpdateQuery(productName.Text, Convert.ToInt32(productQuantity.Text), Convert.ToDecimal(productSale.Text), Convert.ToDecimal(productCost.Text), status, productCategory.Text, Int32.Parse(productID.Text), Int32.Parse(productID.Text));
-                productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
-                productID.Text = "";
-                productName.Text = "";
-                productQuantity.Text = "";
-                productCost.Text = "";
-                productSale.Text = "";
-                productCategory.Text = "";
-                radioButton1.Checked = false;
-                radioButton2.Checked = false;
-                MessageBox.Show("Updated");
             }
-            catch
+            else if (result == DialogResult.No)
             {
-                MessageBox.Show("Error While Updating");
+                MessageBox.Show("Canceled To Update Product!");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Do You Want To Add New Product ?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
             {
-                
 
-                productsTableAdapter.InsertQuery(productName.Text, Convert.ToInt32(productQuantity.Text) + Quant, Convert.ToDecimal(productSale.Text), Convert.ToDecimal(productCost.Text), status, productCategory.Text);
-                productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
-                productID.Text = "";
-                productName.Text = "";
-                productQuantity.Text = "";
-                productCost.Text = "";
-                productSale.Text = "";
-                productCategory.Text = "";
-                radioButton1.Checked = false;
-                radioButton2.Checked = false;
-                MessageBox.Show("ADDED!");
+                try
+                {
+
+
+                    productsTableAdapter.InsertQuery(productName.Text, Convert.ToInt32(productQuantity.Text) + Quant, Convert.ToDecimal(productSale.Text), Convert.ToDecimal(productCost.Text), status, productCategory.Text);
+                    productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
+                    productID.Text = "";
+                    productName.Text = "";
+                    productQuantity.Text = "";
+                    productCost.Text = "";
+                    productSale.Text = "";
+                    productCategory.Text = "";
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = false;
+                    MessageBox.Show("Products Is Added Successfully!");
+                }
+                catch
+                {
+                    MessageBox.Show("Error While Adding Product!");
+                }
             }
-            catch
+            else if (result == DialogResult.No)
             {
-                MessageBox.Show("Error While Adding");
+                MessageBox.Show("Canceled To Add New Product!");
             }
-
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -107,6 +124,7 @@ namespace Varsity_Phamarcy
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             productID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            Id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             productName.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             productCost.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             productQuantity.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -181,6 +199,37 @@ namespace Varsity_Phamarcy
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do You Want To Delete a Product ?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+
+                try
+                {
+                    productsTableAdapter.DeleteQuery(Convert.ToInt32(Id));
+                    productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
+                    productID.Text = "";
+                    productName.Text = "";
+                    productQuantity.Text = "";
+                    productCost.Text = "";
+                    productSale.Text = "";
+                    productCategory.Text = "";
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = false;
+                    MessageBox.Show("Product Deleted Successfully!");
+                }
+                catch
+                {
+                    MessageBox.Show("Error While Deleting Products!");
+                }
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Canceled To Delete Product!");
+            }
         }
     }
 }

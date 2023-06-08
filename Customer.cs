@@ -36,8 +36,7 @@ namespace Varsity_Phamarcy
 
         private void Customer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Customers' table. You can move, or remove it, as needed.
-            this.customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
+            
 
 
 
@@ -201,10 +200,17 @@ namespace Varsity_Phamarcy
                             radioButton1.Text = "Activate";
                             radioButton2.Text = "Deactivate";
                         }
-
-                        customersTableAdapter.InsertQuery(Name.Text, Surname.Text, Email.Text, Identity.Text, Age, this.Phone.Text, Gend.Text, Convert.ToInt16(AidNumber.Text), Number.Text, Status, AidName.Text);
-                        customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
-                        MessageBox.Show("New Customer Added");
+                        try
+                        {
+                            customersTableAdapter.InsertQuery(Name.Text, Surname.Text, Email.Text, Identity.Text, Age, this.Phone.Text, Gend.Text, Convert.ToInt16(AidNumber.Text), Number.Text, Status, AidName.Text);
+                            customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
+                            MessageBox.Show("New Customer Added Successfully");
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Error While Adding New Customer!");
+                        }
+                        
                     }
                     else if (count5 == 0)
                     {
@@ -388,9 +394,28 @@ namespace Varsity_Phamarcy
                             radioButton2.Text = "Deactivated";
                         }
 
-                        customersTableAdapter.UpdateQuery(Name.Text, Surname.Text, Email.Text, Identity.Text, int.Parse(Number.Text), this.Phone.Text, Gend.Text.ToString(), int.Parse(AidNumber.Text), Number.Text, Status, AidName.Text, int.Parse(customerID.Text), int.Parse(customerID.Text));
-                        customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
-                        MessageBox.Show("Customer Updated");
+                        try
+                        {
+                            customersTableAdapter.UpdateQuery(Name.Text, Surname.Text, Email.Text, Identity.Text, int.Parse(Number.Text), this.Phone.Text, Gend.Text.ToString(), int.Parse(AidNumber.Text), Number.Text, Status, AidName.Text, int.Parse(customerID.Text), int.Parse(customerID.Text));
+                            customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
+                            MessageBox.Show("Customer Updated Successfully.");
+                            customerID.Clear();
+                            Name.Clear();
+                            Surname.Clear();
+                            Email.Clear();
+                            Identity.Clear();
+                            Number.Clear();
+                            Phone = "";
+                            Gend.Clear();
+                            AidName.SelectedItem = "";
+                            AidNumber.Clear();
+
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Error While Updating Customer!");
+                        }
+                        
                     }
                     else if (count5 == 0)
                     {
@@ -410,23 +435,9 @@ namespace Varsity_Phamarcy
 
             else if (result == DialogResult.No)
             {
-                MessageBox.Show("Customer Not Updated");
+                MessageBox.Show("Canceled To Update Customer!");
             }
-            else
-            {
-                MessageBox.Show("Cancelled");
-            }
-
-            customerID.Clear();
-            Name.Clear();
-            Surname.Clear();
-            Email.Clear();
-            Identity.Clear();
-            Number.Clear();
-            Phone.Clear();
-            Gend.Clear();
-            AidName.SelectedItem = "";
-            AidNumber.Clear();
+            
         }
 
 
@@ -526,9 +537,35 @@ namespace Varsity_Phamarcy
 
         private void button2_Click(object sender, EventArgs e)
         {
-            customersTableAdapter.DeleteQuery(int.Parse(customerID.Text));
-            customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
-            MessageBox.Show("Customer Deleted Successfully");
+            DialogResult result = MessageBox.Show("Do You Want To Update Staff ?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+
+                try
+                {
+                    customersTableAdapter.DeleteQuery(int.Parse(customerID.Text));
+                    customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
+                    MessageBox.Show("Customer Deleted Successfully");
+                    customerID.Clear();
+                    Name.Clear();
+                    Surname.Clear();
+                    Email.Clear();
+                    Identity.Clear();
+                    Number.Clear();
+                    Phone.Clear();
+                    Gend.Clear();
+                    AidName.SelectedItem = "";
+                    AidNumber.Clear();
+                }
+                catch
+                {
+                    MessageBox.Show("Error While Deleting Customer!");
+                }
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Canceled To Delete Customer!");
+            }
         }
     }
 }

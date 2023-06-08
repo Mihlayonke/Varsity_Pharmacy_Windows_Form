@@ -1,6 +1,6 @@
 ﻿namespace Varsity_Phamarcy
 {
-    partial class Users
+    partial class Staff
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff));
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -68,6 +68,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.staffTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.StaffTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
@@ -94,9 +95,9 @@
             this.button2.BackColor = System.Drawing.Color.Yellow;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(196, 422);
+            this.button2.Location = new System.Drawing.Point(115, 422);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 65);
+            this.button2.Size = new System.Drawing.Size(101, 65);
             this.button2.TabIndex = 38;
             this.button2.Text = "UPDATE";
             this.button2.UseVisualStyleBackColor = false;
@@ -109,7 +110,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(10, 422);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 65);
+            this.button1.Size = new System.Drawing.Size(99, 65);
             this.button1.TabIndex = 37;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
@@ -121,7 +122,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(8, 305);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 16);
+            this.label10.Size = new System.Drawing.Size(76, 16);
             this.label10.TabIndex = 36;
             this.label10.Text = "Password";
             // 
@@ -145,7 +146,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(8, 264);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 16);
+            this.label9.Size = new System.Drawing.Size(84, 16);
             this.label9.TabIndex = 32;
             this.label9.Text = "ID Number";
             // 
@@ -155,7 +156,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(8, 221);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 16);
+            this.label8.Size = new System.Drawing.Size(47, 16);
             this.label8.TabIndex = 31;
             this.label8.Text = "Email";
             // 
@@ -165,7 +166,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 179);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.Size = new System.Drawing.Size(83, 16);
             this.label7.TabIndex = 30;
             this.label7.Text = "Phone No.";
             // 
@@ -185,7 +186,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(8, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
+            this.label5.Size = new System.Drawing.Size(49, 16);
             this.label5.TabIndex = 28;
             this.label5.Text = "Name";
             // 
@@ -389,7 +390,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 16);
+            this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 43;
             this.label1.Text = "Name";
             // 
@@ -407,7 +408,7 @@
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(15, 21);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(81, 20);
+            this.radioButton1.Size = new System.Drawing.Size(82, 20);
             this.radioButton1.TabIndex = 53;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Activate";
@@ -420,7 +421,7 @@
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(184, 21);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(100, 20);
+            this.radioButton2.Size = new System.Drawing.Size(101, 20);
             this.radioButton2.TabIndex = 54;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Deactivate";
@@ -443,7 +444,20 @@
             // 
             this.staffTableAdapter.ClearBeforeFill = true;
             // 
-            // Users
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(222, 422);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 65);
+            this.button3.TabIndex = 56;
+            this.button3.Text = "DELETE";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -451,6 +465,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1024, 516);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
@@ -476,9 +491,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Users";
+            this.Name = "Staff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Users";
+            this.Text = "Staff";
             this.Load += new System.EventHandler(this.ManageUsers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -533,5 +548,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn staffIdentityNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffPasswordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button3;
     }
 }

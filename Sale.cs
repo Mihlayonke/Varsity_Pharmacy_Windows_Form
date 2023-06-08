@@ -114,7 +114,7 @@ namespace Varsity_Phamarcy
                 total.Text = Total.ToString();
                 Qty += 1;
                 QtyBox.Text = Qty.ToString();
-                list.Text += " \n " + count + ") === " + productName.Text + "  --->   R" + Price.Text + " === " + " \n ";
+                list.Text += " \r\n " + count + ") === " + productName.Text + "  --->   R" + Price.Text + " \r\n ";
 
                 productsTableAdapter.UpdateQuery2(productName.Text, Q, Decimal.Parse(Price.Text), ID, ID);
                 productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
@@ -195,31 +195,7 @@ namespace Varsity_Phamarcy
 
                 this.sale_itemTableAdapter.Fill(this.varsityPharmacyDataSet.Sale_item);
                 products = "";
-                //int ss = Convert.ToInt32(this.itemTableAdapter.ScalarQuery1());
-                //textBox3.Text = ss.ToString();
                 
-                /*for (int j = 1; j < quantityy.Count; j++)
-                {
-                    if (product[j] == 0 || pricee[j] == 0 || quantityy[j] == 0)
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        sale_Item2TableAdapter.InsertQuery(int.Parse(textBox3.Text), product1[j], quantityy[j], pricee[j]);
-                        this.sale_Item2TableAdapter.Fill(this.group18DataSet3.Sale_Item2);
-                    }
-
-                }*/
-
-                /*try
-                {
-                    
-                }
-                catch
-                {
-                    MessageBox.Show("Error Occured While Adding !!!");
-                }*/
             }
         }
 
@@ -299,11 +275,6 @@ namespace Varsity_Phamarcy
             cust.Show();
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             
@@ -328,14 +299,10 @@ namespace Varsity_Phamarcy
             suppliers.Show();
         }
 
-        private void productName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView4_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             custName.Text = dataGridView4.CurrentRow.Cells[0].Value.ToString();
         }
+
     }
 }

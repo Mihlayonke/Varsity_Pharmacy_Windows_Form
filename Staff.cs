@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace Varsity_Phamarcy
 {
-    public partial class Users : Form
+    public partial class Staff : Form
     {
 
         public string Status;
 
-        public Users()
+        public Staff()
         {
             InitializeComponent();
         }
@@ -174,7 +174,7 @@ namespace Varsity_Phamarcy
             }
             else if (result == DialogResult.No)
             {
-                MessageBox.Show("Staff Is Not Updated");
+                MessageBox.Show("Canceled To Updat Staff");
             }
 
         }
@@ -190,7 +190,7 @@ namespace Varsity_Phamarcy
 
         private void button1_Click(object sender, EventArgs e){
 
-            DialogResult result = MessageBox.Show("Do you want to confirm staff ?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            DialogResult result = MessageBox.Show("Do You Want To Add Staff ?", "Confirmation", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
 
@@ -332,7 +332,7 @@ namespace Varsity_Phamarcy
             }
             else if (result == DialogResult.No)
             {
-                MessageBox.Show("New cell Staff not added");
+                MessageBox.Show("Canceled To Add New Staff!");
             }
            
 
@@ -416,6 +416,36 @@ namespace Varsity_Phamarcy
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do You Want To Update Staff ?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    this.staffTableAdapter.DeleteQuery(Int32.Parse(textBox1.Text));
+                    this.staffTableAdapter.Fill(this.varsityPharmacyDataSet.Staff);
+                    staffName.Clear();
+                    staffID.Clear();
+                    staffPassword.Clear();
+                    staffPhone.Clear();
+                    staffEmail.Clear();
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = false;
+                    textBox1.Clear();
+                    MessageBox.Show("Staff Deleted Successfully!");
+                }
+                catch
+                {
+                    MessageBox.Show("Error While Deleting a Staff");
+                }
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Canceled To Delete Staff!");
+            }
         }
     }
 }

@@ -81,6 +81,7 @@ namespace Varsity_Phamarcy
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.productsTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.ProductsTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
@@ -116,7 +117,7 @@ namespace Varsity_Phamarcy
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Name";
             // 
@@ -126,7 +127,7 @@ namespace Varsity_Phamarcy
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 16);
+            this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Cost Price";
             // 
@@ -136,7 +137,7 @@ namespace Varsity_Phamarcy
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(9, 116);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Packs";
             // 
@@ -146,7 +147,7 @@ namespace Varsity_Phamarcy
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(9, 276);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.Size = new System.Drawing.Size(72, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Category";
             // 
@@ -156,7 +157,7 @@ namespace Varsity_Phamarcy
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(5, 411);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(129, 56);
+            this.btnAdd.Size = new System.Drawing.Size(104, 56);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -166,9 +167,9 @@ namespace Varsity_Phamarcy
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Yellow;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(197, 411);
+            this.btnUpdate.Location = new System.Drawing.Point(115, 411);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(124, 56);
+            this.btnUpdate.Size = new System.Drawing.Size(101, 56);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -218,6 +219,8 @@ namespace Varsity_Phamarcy
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -234,6 +237,7 @@ namespace Varsity_Phamarcy
             this.dataGridView1.DataSource = this.productsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(352, 66);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(685, 316);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -250,36 +254,42 @@ namespace Varsity_Phamarcy
             this.productNameDataGridViewTextBoxColumn2.DataPropertyName = "productName";
             this.productNameDataGridViewTextBoxColumn2.HeaderText = "productName";
             this.productNameDataGridViewTextBoxColumn2.Name = "productNameDataGridViewTextBoxColumn2";
+            this.productNameDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // productQuantityDataGridViewTextBoxColumn2
             // 
             this.productQuantityDataGridViewTextBoxColumn2.DataPropertyName = "productQuantity";
             this.productQuantityDataGridViewTextBoxColumn2.HeaderText = "productQuantity";
             this.productQuantityDataGridViewTextBoxColumn2.Name = "productQuantityDataGridViewTextBoxColumn2";
+            this.productQuantityDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "salePrice";
             this.dataGridViewTextBoxColumn10.HeaderText = "salePrice";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "costPrice";
             this.dataGridViewTextBoxColumn11.HeaderText = "costPrice";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Status";
             this.dataGridViewTextBoxColumn12.HeaderText = "Status";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Category";
             this.dataGridViewTextBoxColumn13.HeaderText = "Category";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
             // productsBindingSource
             // 
@@ -322,7 +332,7 @@ namespace Varsity_Phamarcy
             // 
             // productID
             // 
-            this.productID.Location = new System.Drawing.Point(179, 431);
+            this.productID.Location = new System.Drawing.Point(339, 428);
             this.productID.Multiline = true;
             this.productID.Name = "productID";
             this.productID.Size = new System.Drawing.Size(12, 27);
@@ -348,7 +358,7 @@ namespace Varsity_Phamarcy
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(44, 21);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(91, 20);
+            this.radioButton1.Size = new System.Drawing.Size(92, 20);
             this.radioButton1.TabIndex = 31;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Available";
@@ -361,7 +371,7 @@ namespace Varsity_Phamarcy
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(212, 21);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(109, 20);
+            this.radioButton2.Size = new System.Drawing.Size(110, 20);
             this.radioButton2.TabIndex = 32;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Unavailable";
@@ -374,7 +384,7 @@ namespace Varsity_Phamarcy
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 221);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
+            this.label1.Size = new System.Drawing.Size(82, 16);
             this.label1.TabIndex = 34;
             this.label1.Text = "Sale Price";
             // 
@@ -486,6 +496,18 @@ namespace Varsity_Phamarcy
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(232, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 56);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "DELETE";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // Products1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -494,6 +516,7 @@ namespace Varsity_Phamarcy
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1044, 507);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -593,6 +616,7 @@ namespace Varsity_Phamarcy
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private Button button2;
 
         public EventHandler costPrice_TextChanged { get; private set; }
     }

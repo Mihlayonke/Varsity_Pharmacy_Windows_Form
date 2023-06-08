@@ -127,13 +127,13 @@
     <value>558, 56</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>114</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAw8AAAG5CAYAAADI0AiXAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAA/7JJREFUeF7sfQd8HdWZ/WvqspolW7LVrd6Le+82uGBsMG7YBmODscGYZuOCjXvv
+        vgAADr4B6kKxwAAA/7JJREFUeF7sfQd8HdWZ/WvqspolW7LVrd6Le+82uGBsMG7YBmODscGYZuOCjXvv
         lgQkQJJN2U3btP9ms5vdzSabTW+bsultQ0hCQkICofM/59O7k5l586QnWTIu39Hv/G6ZO3305jvz3e9e
         n0KhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQ
         KBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqF
