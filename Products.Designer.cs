@@ -78,8 +78,8 @@ namespace Varsity_Phamarcy
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productQuantityDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
@@ -230,8 +230,8 @@ namespace Varsity_Phamarcy
             this.dataGridViewTextBoxColumn9,
             this.productNameDataGridViewTextBoxColumn2,
             this.productQuantityDataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.dataGridView1.DataSource = this.productsBindingSource;
@@ -480,19 +480,19 @@ namespace Varsity_Phamarcy
             this.productQuantityDataGridViewTextBoxColumn2.Name = "productQuantityDataGridViewTextBoxColumn2";
             this.productQuantityDataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "salePrice";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Sale Price";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "costPrice";
             this.dataGridViewTextBoxColumn11.HeaderText = "Cost Price";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "salePrice";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Sale Price";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -613,8 +613,8 @@ namespace Varsity_Phamarcy
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn productQuantityDataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
 

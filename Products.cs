@@ -129,8 +129,8 @@ namespace Varsity_Phamarcy
             productCost.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             productQuantity.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             productSale.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            productCategory.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            status = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            productCategory.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            status = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             
             if (status.Equals("Available")){
                 radioButton1.Checked = true;

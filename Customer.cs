@@ -78,17 +78,17 @@ namespace Varsity_Phamarcy
                     Age1 = ID.Substring(0, 2);
                     Age2 = Int32.Parse(Age1);
                     
-                    if (Age2 > 21)
+                    if (Age2 > 23)
                     {
                         CurrYear = 1900;
                         
-                    }else if (Age2 <= 21)
+                    }else if (Age2 <= 23)
                     {
                         CurrYear = 2000;
                     }
                     Age2 += CurrYear;
 
-                    Age = (2021 - Age2);
+                    Age = (2023 - Age2);
 
                     ID_Num = Int32.Parse(ID);
                     Date = ID_Num;
@@ -135,7 +135,7 @@ namespace Varsity_Phamarcy
                         {
                             if (Day <= 0 || Day > 31)
                             {
-                                MessageBox.Show("Invalid Day of Birth for the Identiry 2, Day: " + Day);
+                                MessageBox.Show("Invalid Day of Birth for the Identity 2, Day: " + Day);
                             }
                             else
                             {
@@ -200,9 +200,11 @@ namespace Varsity_Phamarcy
                             radioButton1.Text = "Activate";
                             radioButton2.Text = "Deactivate";
                         }
+
+                        
                         try
                         {
-                            customersTableAdapter.InsertQuery(Name.Text, Surname.Text, Email.Text, Identity.Text, Age, this.Phone.Text, Gend.Text, Convert.ToInt16(AidNumber.Text), Number.Text, Status, AidName.Text);
+                            customersTableAdapter.InsertQuery(Name.Text, Surname.Text, Email.Text, Identity.Text, Age, this.Phone.Text, Gend.Text, Convert.ToInt32(AidNumber.Text), Number.Text, Status, AidName.Text);
                             customersTableAdapter.Fill(this.varsityPharmacyDataSet.Customers);
                             MessageBox.Show("New Customer Added Successfully");
                         }
@@ -223,7 +225,7 @@ namespace Varsity_Phamarcy
                 }
                 else if (Phone.Length < 12)
                 {
-                    MessageBox.Show("Invalid Legnth of Phone Number !");
+                    MessageBox.Show("Invalid Length of Phone Number !");
 
                 }
             }
@@ -261,21 +263,21 @@ namespace Varsity_Phamarcy
 
 
                 ID = Identity.Text;
-                string Phone = this.Phone.Text;
+                string Phone_ = this.Phone.Text;
 
 
-                if (ID.Length == 13 || Phone.Length == 10)
+                if (ID.Length == 13 || Phone_.Length == 10)
                 {
                     ID = Identity.Text.Substring(0, 6);
                     Age1 = ID.Substring(0, 2);
                     Age2 = Int32.Parse(Age1);
                     
-                    if (Age2 > 21)
+                    if (Age2 > 23)
                     {
                         CurrYear = 1900;
 
                     }
-                    else if (Age2 <= 21)
+                    else if (Age2 <= 23)
                     {
                         CurrYear = 2000;
                     }
@@ -283,7 +285,7 @@ namespace Varsity_Phamarcy
                     Age2 += CurrYear;
 
                     ID_Num = Int32.Parse(ID);
-                    Age = (2021 - Age2);
+                    Age = (2023 - Age2);
                     Date = ID_Num;
                     Year = Date / 10000;
                     Month = Date % 10000;
@@ -328,7 +330,7 @@ namespace Varsity_Phamarcy
                         {
                             if (Day <= 0 || Day > 31)
                             {
-                                MessageBox.Show("Invalid Day of Birth for the Identiry 2, Day: " + Day);
+                                MessageBox.Show("Invalid Day of Birth for the Identity 2, Day: " + Day);
                             }
                             else
                             {
@@ -394,6 +396,7 @@ namespace Varsity_Phamarcy
                             radioButton2.Text = "Deactivated";
                         }
 
+                        Number.Text = Age.ToString();
                         try
                         {
                             customersTableAdapter.UpdateQuery(Name.Text, Surname.Text, Email.Text, Identity.Text, int.Parse(Number.Text), this.Phone.Text, Gend.Text.ToString(), int.Parse(AidNumber.Text), Number.Text, Status, AidName.Text, int.Parse(customerID.Text), int.Parse(customerID.Text));
@@ -405,7 +408,7 @@ namespace Varsity_Phamarcy
                             Email.Clear();
                             Identity.Clear();
                             Number.Clear();
-                            Phone = "";
+                            Phone.Clear();
                             Gend.Clear();
                             AidName.SelectedItem = "";
                             AidNumber.Clear();
@@ -426,9 +429,9 @@ namespace Varsity_Phamarcy
                 {
                     MessageBox.Show(" Invalid Length of ID Number ! ");
                 }
-                else if (Phone.Length < 12)
+                else if (Phone_.Length < 12)
                 {
-                    MessageBox.Show("Invalid Legnth of Phone Number !");
+                    MessageBox.Show("Invalid Length of Phone Number !");
 
                 }
             }
@@ -488,7 +491,7 @@ namespace Varsity_Phamarcy
             }
             catch
             {
-                MessageBox.Show("Error while Filling TextBoxs ");
+                MessageBox.Show("Error while Filling TextBoxes ");
             }
             
         }
