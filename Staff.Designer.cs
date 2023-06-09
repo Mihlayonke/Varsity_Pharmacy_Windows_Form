@@ -51,14 +51,6 @@
             this.staffPhone = new System.Windows.Forms.MaskedTextBox();
             this.staffID = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffPhoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffEmailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffIdentityNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.varsityPharmacyDataSet = new Varsity_Phamarcy.VarsityPharmacyDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,6 +61,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.staffTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.StaffTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
+            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffPhoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffEmailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffIdentityNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffPasswordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
@@ -122,7 +122,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(8, 305);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 16);
+            this.label10.Size = new System.Drawing.Size(75, 16);
             this.label10.TabIndex = 36;
             this.label10.Text = "Password";
             // 
@@ -146,7 +146,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(8, 264);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.Size = new System.Drawing.Size(80, 16);
             this.label9.TabIndex = 32;
             this.label9.Text = "ID Number";
             // 
@@ -156,7 +156,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(8, 221);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 16);
+            this.label8.Size = new System.Drawing.Size(46, 16);
             this.label8.TabIndex = 31;
             this.label8.Text = "Email";
             // 
@@ -166,7 +166,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(8, 179);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 16);
+            this.label7.Size = new System.Drawing.Size(79, 16);
             this.label7.TabIndex = 30;
             this.label7.Text = "Phone No.";
             // 
@@ -186,7 +186,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(8, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
+            this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 28;
             this.label5.Text = "Name";
             // 
@@ -303,63 +303,6 @@
             this.dataGridView1.TabIndex = 46;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // staffIDDataGridViewTextBoxColumn
-            // 
-            this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "staffID";
-            this.staffIDDataGridViewTextBoxColumn.HeaderText = "staffID";
-            this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
-            this.staffIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // staffNameDataGridViewTextBoxColumn
-            // 
-            this.staffNameDataGridViewTextBoxColumn.DataPropertyName = "staffName";
-            this.staffNameDataGridViewTextBoxColumn.HeaderText = "staffName";
-            this.staffNameDataGridViewTextBoxColumn.Name = "staffNameDataGridViewTextBoxColumn";
-            this.staffNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // staffTypeDataGridViewTextBoxColumn
-            // 
-            this.staffTypeDataGridViewTextBoxColumn.DataPropertyName = "staffType";
-            this.staffTypeDataGridViewTextBoxColumn.HeaderText = "staffType";
-            this.staffTypeDataGridViewTextBoxColumn.Name = "staffTypeDataGridViewTextBoxColumn";
-            this.staffTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // staffPhoneNoDataGridViewTextBoxColumn
-            // 
-            this.staffPhoneNoDataGridViewTextBoxColumn.DataPropertyName = "staffPhoneNo";
-            this.staffPhoneNoDataGridViewTextBoxColumn.HeaderText = "staffPhoneNo";
-            this.staffPhoneNoDataGridViewTextBoxColumn.Name = "staffPhoneNoDataGridViewTextBoxColumn";
-            this.staffPhoneNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // staffEmailAddressDataGridViewTextBoxColumn
-            // 
-            this.staffEmailAddressDataGridViewTextBoxColumn.DataPropertyName = "staffEmailAddress";
-            this.staffEmailAddressDataGridViewTextBoxColumn.HeaderText = "staffEmailAddress";
-            this.staffEmailAddressDataGridViewTextBoxColumn.Name = "staffEmailAddressDataGridViewTextBoxColumn";
-            this.staffEmailAddressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // staffIdentityNumberDataGridViewTextBoxColumn
-            // 
-            this.staffIdentityNumberDataGridViewTextBoxColumn.DataPropertyName = "staffIdentityNumber";
-            this.staffIdentityNumberDataGridViewTextBoxColumn.HeaderText = "staffIdentityNumber";
-            this.staffIdentityNumberDataGridViewTextBoxColumn.Name = "staffIdentityNumberDataGridViewTextBoxColumn";
-            this.staffIdentityNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // staffPasswordDataGridViewTextBoxColumn
-            // 
-            this.staffPasswordDataGridViewTextBoxColumn.DataPropertyName = "staffPassword";
-            this.staffPasswordDataGridViewTextBoxColumn.HeaderText = "staffPassword";
-            this.staffPasswordDataGridViewTextBoxColumn.Name = "staffPasswordDataGridViewTextBoxColumn";
-            this.staffPasswordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.staffPasswordDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // staffBindingSource
             // 
             this.staffBindingSource.DataMember = "Staff";
@@ -390,7 +333,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 43;
             this.label1.Text = "Name";
             // 
@@ -408,7 +351,7 @@
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(15, 21);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 20);
+            this.radioButton1.Size = new System.Drawing.Size(81, 20);
             this.radioButton1.TabIndex = 53;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Activate";
@@ -421,7 +364,7 @@
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(184, 21);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(101, 20);
+            this.radioButton2.Size = new System.Drawing.Size(100, 20);
             this.radioButton2.TabIndex = 54;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Deactivate";
@@ -456,6 +399,63 @@
             this.button3.Text = "DELETE";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // staffIDDataGridViewTextBoxColumn
+            // 
+            this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "staffID";
+            this.staffIDDataGridViewTextBoxColumn.HeaderText = "Staff No.";
+            this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
+            this.staffIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // staffNameDataGridViewTextBoxColumn
+            // 
+            this.staffNameDataGridViewTextBoxColumn.DataPropertyName = "staffName";
+            this.staffNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.staffNameDataGridViewTextBoxColumn.Name = "staffNameDataGridViewTextBoxColumn";
+            this.staffNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // staffTypeDataGridViewTextBoxColumn
+            // 
+            this.staffTypeDataGridViewTextBoxColumn.DataPropertyName = "staffType";
+            this.staffTypeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.staffTypeDataGridViewTextBoxColumn.Name = "staffTypeDataGridViewTextBoxColumn";
+            this.staffTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // staffPhoneNoDataGridViewTextBoxColumn
+            // 
+            this.staffPhoneNoDataGridViewTextBoxColumn.DataPropertyName = "staffPhoneNo";
+            this.staffPhoneNoDataGridViewTextBoxColumn.HeaderText = "Phone Number";
+            this.staffPhoneNoDataGridViewTextBoxColumn.Name = "staffPhoneNoDataGridViewTextBoxColumn";
+            this.staffPhoneNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // staffEmailAddressDataGridViewTextBoxColumn
+            // 
+            this.staffEmailAddressDataGridViewTextBoxColumn.DataPropertyName = "staffEmailAddress";
+            this.staffEmailAddressDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.staffEmailAddressDataGridViewTextBoxColumn.Name = "staffEmailAddressDataGridViewTextBoxColumn";
+            this.staffEmailAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // staffIdentityNumberDataGridViewTextBoxColumn
+            // 
+            this.staffIdentityNumberDataGridViewTextBoxColumn.DataPropertyName = "staffIdentityNumber";
+            this.staffIdentityNumberDataGridViewTextBoxColumn.HeaderText = "Identity Number";
+            this.staffIdentityNumberDataGridViewTextBoxColumn.Name = "staffIdentityNumberDataGridViewTextBoxColumn";
+            this.staffIdentityNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // staffPasswordDataGridViewTextBoxColumn
+            // 
+            this.staffPasswordDataGridViewTextBoxColumn.DataPropertyName = "staffPassword";
+            this.staffPasswordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.staffPasswordDataGridViewTextBoxColumn.Name = "staffPasswordDataGridViewTextBoxColumn";
+            this.staffPasswordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.staffPasswordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Staff
             // 
@@ -540,6 +540,7 @@
         private VarsityPharmacyDataSet varsityPharmacyDataSet;
         private System.Windows.Forms.BindingSource staffBindingSource;
         private VarsityPharmacyDataSetTableAdapters.StaffTableAdapter staffTableAdapter;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffTypeDataGridViewTextBoxColumn;
@@ -548,6 +549,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn staffIdentityNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffPasswordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button3;
     }
 }

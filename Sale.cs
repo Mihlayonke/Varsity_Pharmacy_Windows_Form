@@ -16,7 +16,7 @@ namespace Varsity_Phamarcy
         private const decimal V = (decimal) 0.15;
         private int Qty = 0;
         private int count = 0;
-        private double Total;
+        private decimal Total;
         private string products; //prices;
         List<int> product1 = new List<int>();
         List<int> quantityy = new List<int>();
@@ -31,10 +31,12 @@ namespace Varsity_Phamarcy
 
         private void Sale_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'varsityPharmacyDataSet2.Sale_item' table. You can move, or remove it, as needed.
+            this.sale_itemTableAdapter1.Fill(this.varsityPharmacyDataSet2.Sale_item);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Sale_Item2' table. You can move, or remove it, as needed.
             this.sale_Item2TableAdapter.Fill(this.varsityPharmacyDataSet.Sale_Item2);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Sale_item' table. You can move, or remove it, as needed.
-            this.sale_itemTableAdapter.Fill(this.varsityPharmacyDataSet.Sale_item);
+            this.sale_itemTableAdapter1.Fill(this.varsityPharmacyDataSet2.Sale_item);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Customers' table. You can move, or remove it, as needed.
@@ -42,7 +44,7 @@ namespace Varsity_Phamarcy
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Sale_Item2' table. You can move, or remove it, as needed.
             this.sale_Item2TableAdapter.Fill(this.varsityPharmacyDataSet.Sale_Item2);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Sale_item' table. You can move, or remove it, as needed.
-            this.sale_itemTableAdapter.Fill(this.varsityPharmacyDataSet.Sale_item);
+            this.sale_itemTableAdapter1.Fill(this.varsityPharmacyDataSet2.Sale_item);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Products' table. You can move, or remove it, as needed.
             this.productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
             // TODO: This line of code loads data into the 'varsityPharmacyDataSet.Customers' table. You can move, or remove it, as needed.
@@ -108,15 +110,15 @@ namespace Varsity_Phamarcy
                 MessageBox.Show("No Products Available");
 
             }else{
-                products += count + ".(" + productName.Text + " ---> R" + Price.Text + "),  ";
+                products += count+1 + "." + productName.Text + " ---> R" + Price.Text + "| \r\n";
                 count += 1;
-                Total += Double.Parse(Price.Text);
+                Total += decimal.Parse(Price.Text);
                 total.Text = Total.ToString();
                 Qty += 1;
                 QtyBox.Text = Qty.ToString();
                 list.Text += " \r\n " + count + ") === " + productName.Text + "  --->   R" + Price.Text + " \r\n ";
 
-                productsTableAdapter.UpdateQuery2(productName.Text, Q, Decimal.Parse(Price.Text), ID, ID);
+                productsTableAdapter.UpdateQuery2(productName.Text, Q, decimal.Parse(Price.Text), ID, ID);
                 productsTableAdapter.Fill(this.varsityPharmacyDataSet.Products);
 
                 if (Q < 6)
@@ -138,7 +140,7 @@ namespace Varsity_Phamarcy
             }
             catch
             {
-                MessageBox.Show("Some Error has Occured");
+                MessageBox.Show("Some Error has Occurred");
             }
             
         }
@@ -151,7 +153,7 @@ namespace Varsity_Phamarcy
             string product = products;
             decimal price = decimal.Parse(this.Price.Text);
             int quantity = int.Parse(quant.Text);
-            decimal amount = Decimal.Parse(Tendered.Text);
+            decimal amount = decimal.Parse(Tendered.Text);
             DateTime date = DateTime.Now;
             DayOfWeek wk = DateTime.Now.DayOfWeek;
             string Day = wk.ToString("d");
@@ -187,13 +189,13 @@ namespace Varsity_Phamarcy
             }
             else
             {
-                decimal change = (amount - (decimal)Total);
+                decimal change = (amount - Total);
                 changeBox.Text = "R " + change.ToString();
                 decimal VAT = ((decimal)Total * V);
 
-                sale_itemTableAdapter.InsertQuery(Customer, Staff, products, price, Qty, amount, (decimal)Total, change, VAT, date, Day);
+                sale_itemTableAdapter1.InsertQuery(Customer, Staff, products, (decimal)price, Qty, (decimal)amount, (decimal)Total, (decimal)change,(decimal) VAT, date, Day);
 
-                this.sale_itemTableAdapter.Fill(this.varsityPharmacyDataSet.Sale_item);
+                this.sale_itemTableAdapter1.Fill(this.varsityPharmacyDataSet2.Sale_item);
                 products = "";
                 
             }

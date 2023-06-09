@@ -32,11 +32,8 @@ namespace Varsity_Phamarcy
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Suppliers));
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.quantityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountPaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierOrderItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.varsityPharmacyDataSet = new Varsity_Phamarcy.VarsityPharmacyDataSet();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -56,10 +53,6 @@ namespace Varsity_Phamarcy
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -93,11 +86,6 @@ namespace Varsity_Phamarcy
             this.Email = new System.Windows.Forms.TextBox();
             this.NameS = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierEmailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierTelephoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.varsityPharmacyDataSet1 = new Varsity_Phamarcy.VarsityPharmacyDataSet1();
             this.Manage_Supplier = new System.Windows.Forms.TabControl();
@@ -107,7 +95,19 @@ namespace Varsity_Phamarcy
             this.productsTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.ProductsTableAdapter();
             this.supplier_Order_ItemTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.Supplier_Order_ItemTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierEmailAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierTelephoneNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountPaidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierOrderID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supplierOrderItemBindingSource)).BeginInit();
@@ -164,6 +164,18 @@ namespace Varsity_Phamarcy
             this.tabPage2.Text = "Order Products";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Green;
+            this.button8.Location = new System.Drawing.Point(477, 83);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(139, 54);
+            this.button8.TabIndex = 60;
+            this.button8.Text = "Add New Products";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // dataGridView4
             // 
             this.dataGridView4.AllowUserToAddRows = false;
@@ -183,34 +195,6 @@ namespace Varsity_Phamarcy
             this.dataGridView4.Size = new System.Drawing.Size(445, 150);
             this.dataGridView4.TabIndex = 59;
             this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // quantityDataGridViewTextBoxColumn1
-            // 
-            this.quantityDataGridViewTextBoxColumn1.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn1.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn1.Name = "quantityDataGridViewTextBoxColumn1";
-            this.quantityDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // amountPaidDataGridViewTextBoxColumn
-            // 
-            this.amountPaidDataGridViewTextBoxColumn.DataPropertyName = "amountPaid";
-            this.amountPaidDataGridViewTextBoxColumn.HeaderText = "Amount Paid (R)";
-            this.amountPaidDataGridViewTextBoxColumn.Name = "amountPaidDataGridViewTextBoxColumn";
-            this.amountPaidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // supplierNameDataGridViewTextBoxColumn1
-            // 
-            this.supplierNameDataGridViewTextBoxColumn1.DataPropertyName = "supplierName";
-            this.supplierNameDataGridViewTextBoxColumn1.HeaderText = "Supplier Name";
-            this.supplierNameDataGridViewTextBoxColumn1.Name = "supplierNameDataGridViewTextBoxColumn1";
-            this.supplierNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // supplierOrderID
-            // 
-            this.supplierOrderID.DataPropertyName = "supplierOrderID";
-            this.supplierOrderID.HeaderText = "Order ID";
-            this.supplierOrderID.Name = "supplierOrderID";
-            this.supplierOrderID.ReadOnly = true;
             // 
             // supplierOrderItemBindingSource
             // 
@@ -277,7 +261,7 @@ namespace Varsity_Phamarcy
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(774, 7);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 16);
+            this.label14.Size = new System.Drawing.Size(97, 16);
             this.label14.TabIndex = 55;
             this.label14.Text = "ORDER LIST";
             // 
@@ -287,7 +271,7 @@ namespace Varsity_Phamarcy
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(160, 7);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(168, 16);
+            this.label13.Size = new System.Drawing.Size(153, 16);
             this.label13.TabIndex = 54;
             this.label13.Text = "SELECT PRODUCTS";
             // 
@@ -297,7 +281,7 @@ namespace Varsity_Phamarcy
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(182, 268);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 16);
+            this.label9.Size = new System.Drawing.Size(128, 16);
             this.label9.TabIndex = 53;
             this.label9.Text = "ORDER DETAILS";
             // 
@@ -307,7 +291,7 @@ namespace Varsity_Phamarcy
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(45, 443);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 16);
+            this.label7.Size = new System.Drawing.Size(131, 16);
             this.label7.TabIndex = 52;
             this.label7.Text = "Selected Supplier";
             // 
@@ -407,34 +391,6 @@ namespace Varsity_Phamarcy
             this.dataGridView3.TabIndex = 44;
             this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick_1);
             // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "productName";
-            this.productNameDataGridViewTextBoxColumn.HeaderText = "Product Name";
-            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productQuantityDataGridViewTextBoxColumn
-            // 
-            this.productQuantityDataGridViewTextBoxColumn.DataPropertyName = "productQuantity";
-            this.productQuantityDataGridViewTextBoxColumn.HeaderText = "Product Quantity";
-            this.productQuantityDataGridViewTextBoxColumn.Name = "productQuantityDataGridViewTextBoxColumn";
-            this.productQuantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costPrice
-            // 
-            this.costPrice.DataPropertyName = "costPrice";
-            this.costPrice.HeaderText = "Cost Price";
-            this.costPrice.Name = "costPrice";
-            this.costPrice.ReadOnly = true;
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "product ID";
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // productsBindingSource
             // 
             this.productsBindingSource.DataMember = "Products";
@@ -446,7 +402,7 @@ namespace Varsity_Phamarcy
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(647, 421);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 16);
+            this.label1.Size = new System.Drawing.Size(101, 16);
             this.label1.TabIndex = 43;
             this.label1.Text = "Total Cost, R:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -504,7 +460,7 @@ namespace Varsity_Phamarcy
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(804, 421);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 16);
+            this.label8.Size = new System.Drawing.Size(99, 16);
             this.label8.TabIndex = 37;
             this.label8.Text = "Totoal Packs";
             // 
@@ -514,7 +470,7 @@ namespace Varsity_Phamarcy
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(50, 184);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 16);
+            this.label6.Size = new System.Drawing.Size(126, 16);
             this.label6.TabIndex = 31;
             this.label6.Text = "Selected Product";
             // 
@@ -592,7 +548,7 @@ namespace Varsity_Phamarcy
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(49, 20);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 20);
+            this.radioButton1.Size = new System.Drawing.Size(81, 20);
             this.radioButton1.TabIndex = 49;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Activate";
@@ -605,7 +561,7 @@ namespace Varsity_Phamarcy
             this.radioButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.Location = new System.Drawing.Point(200, 21);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(101, 20);
+            this.radioButton4.Size = new System.Drawing.Size(100, 20);
             this.radioButton4.TabIndex = 50;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Deactivate";
@@ -782,41 +738,6 @@ namespace Varsity_Phamarcy
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
-            // supplierIDDataGridViewTextBoxColumn
-            // 
-            this.supplierIDDataGridViewTextBoxColumn.DataPropertyName = "supplier_ID";
-            this.supplierIDDataGridViewTextBoxColumn.HeaderText = "supplier_ID";
-            this.supplierIDDataGridViewTextBoxColumn.Name = "supplierIDDataGridViewTextBoxColumn";
-            this.supplierIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // supplierNameDataGridViewTextBoxColumn
-            // 
-            this.supplierNameDataGridViewTextBoxColumn.DataPropertyName = "supplierName";
-            this.supplierNameDataGridViewTextBoxColumn.HeaderText = "supplierName";
-            this.supplierNameDataGridViewTextBoxColumn.Name = "supplierNameDataGridViewTextBoxColumn";
-            this.supplierNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // supplierEmailAddressDataGridViewTextBoxColumn
-            // 
-            this.supplierEmailAddressDataGridViewTextBoxColumn.DataPropertyName = "supplierEmailAddress";
-            this.supplierEmailAddressDataGridViewTextBoxColumn.HeaderText = "supplierEmailAddress";
-            this.supplierEmailAddressDataGridViewTextBoxColumn.Name = "supplierEmailAddressDataGridViewTextBoxColumn";
-            this.supplierEmailAddressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // supplierTelephoneNoDataGridViewTextBoxColumn
-            // 
-            this.supplierTelephoneNoDataGridViewTextBoxColumn.DataPropertyName = "supplierTelephoneNo";
-            this.supplierTelephoneNoDataGridViewTextBoxColumn.HeaderText = "supplierTelephoneNo";
-            this.supplierTelephoneNoDataGridViewTextBoxColumn.Name = "supplierTelephoneNoDataGridViewTextBoxColumn";
-            this.supplierTelephoneNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // supplierBindingSource
             // 
             this.supplierBindingSource.DataMember = "Supplier";
@@ -881,17 +802,96 @@ namespace Varsity_Phamarcy
             this.panel3.Size = new System.Drawing.Size(1025, 18);
             this.panel3.TabIndex = 52;
             // 
-            // button8
+            // supplierIDDataGridViewTextBoxColumn
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Green;
-            this.button8.Location = new System.Drawing.Point(477, 83);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(139, 54);
-            this.button8.TabIndex = 60;
-            this.button8.Text = "Add New Products";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.supplierIDDataGridViewTextBoxColumn.DataPropertyName = "supplier_ID";
+            this.supplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier No.";
+            this.supplierIDDataGridViewTextBoxColumn.Name = "supplierIDDataGridViewTextBoxColumn";
+            this.supplierIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // supplierNameDataGridViewTextBoxColumn
+            // 
+            this.supplierNameDataGridViewTextBoxColumn.DataPropertyName = "supplierName";
+            this.supplierNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.supplierNameDataGridViewTextBoxColumn.Name = "supplierNameDataGridViewTextBoxColumn";
+            this.supplierNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // supplierEmailAddressDataGridViewTextBoxColumn
+            // 
+            this.supplierEmailAddressDataGridViewTextBoxColumn.DataPropertyName = "supplierEmailAddress";
+            this.supplierEmailAddressDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.supplierEmailAddressDataGridViewTextBoxColumn.Name = "supplierEmailAddressDataGridViewTextBoxColumn";
+            this.supplierEmailAddressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // supplierTelephoneNoDataGridViewTextBoxColumn
+            // 
+            this.supplierTelephoneNoDataGridViewTextBoxColumn.DataPropertyName = "supplierTelephoneNo";
+            this.supplierTelephoneNoDataGridViewTextBoxColumn.HeaderText = "Telephone No.";
+            this.supplierTelephoneNoDataGridViewTextBoxColumn.Name = "supplierTelephoneNoDataGridViewTextBoxColumn";
+            this.supplierTelephoneNoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            this.productNameDataGridViewTextBoxColumn.DataPropertyName = "productName";
+            this.productNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            this.productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productQuantityDataGridViewTextBoxColumn
+            // 
+            this.productQuantityDataGridViewTextBoxColumn.DataPropertyName = "productQuantity";
+            this.productQuantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.productQuantityDataGridViewTextBoxColumn.Name = "productQuantityDataGridViewTextBoxColumn";
+            this.productQuantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costPrice
+            // 
+            this.costPrice.DataPropertyName = "costPrice";
+            this.costPrice.HeaderText = "Cost Price (R)";
+            this.costPrice.Name = "costPrice";
+            this.costPrice.ReadOnly = true;
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product No.";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn1
+            // 
+            this.quantityDataGridViewTextBoxColumn1.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn1.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn1.Name = "quantityDataGridViewTextBoxColumn1";
+            this.quantityDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // amountPaidDataGridViewTextBoxColumn
+            // 
+            this.amountPaidDataGridViewTextBoxColumn.DataPropertyName = "amountPaid";
+            this.amountPaidDataGridViewTextBoxColumn.HeaderText = "Amount Paid (R)";
+            this.amountPaidDataGridViewTextBoxColumn.Name = "amountPaidDataGridViewTextBoxColumn";
+            this.amountPaidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // supplierNameDataGridViewTextBoxColumn1
+            // 
+            this.supplierNameDataGridViewTextBoxColumn1.DataPropertyName = "supplierName";
+            this.supplierNameDataGridViewTextBoxColumn1.HeaderText = "Supplier Name";
+            this.supplierNameDataGridViewTextBoxColumn1.Name = "supplierNameDataGridViewTextBoxColumn1";
+            this.supplierNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // supplierOrderID
+            // 
+            this.supplierOrderID.DataPropertyName = "supplierOrderID";
+            this.supplierOrderID.HeaderText = "Order No.";
+            this.supplierOrderID.Name = "supplierOrderID";
+            this.supplierOrderID.ReadOnly = true;
             // 
             // Suppliers
             // 
@@ -1004,11 +1004,9 @@ namespace Varsity_Phamarcy
         private VarsityPharmacyDataSet1 varsityPharmacyDataSet1;
         private System.Windows.Forms.BindingSource supplierBindingSource;
         private VarsityPharmacyDataSet1TableAdapters.SupplierTableAdapter supplierTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierEmailAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierTelephoneNoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountPaidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierNameDataGridViewTextBoxColumn1;
@@ -1017,8 +1015,10 @@ namespace Varsity_Phamarcy
         private System.Windows.Forms.DataGridViewTextBoxColumn productQuantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierEmailAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierTelephoneNoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }

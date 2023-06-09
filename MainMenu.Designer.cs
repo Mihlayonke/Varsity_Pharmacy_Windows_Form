@@ -121,9 +121,9 @@ namespace Varsity_Phamarcy
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(564, 439);
+            this.button1.Location = new System.Drawing.Point(564, 452);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 76);
+            this.button1.Size = new System.Drawing.Size(125, 63);
             this.button1.TabIndex = 7;
             this.button1.Text = "EXIT";
             this.button1.UseVisualStyleBackColor = false;
@@ -155,9 +155,9 @@ namespace Varsity_Phamarcy
             this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Green;
-            this.button2.Location = new System.Drawing.Point(322, 439);
+            this.button2.Location = new System.Drawing.Point(322, 452);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 76);
+            this.button2.Size = new System.Drawing.Size(130, 63);
             this.button2.TabIndex = 10;
             this.button2.Text = "HELP";
             this.button2.UseVisualStyleBackColor = false;

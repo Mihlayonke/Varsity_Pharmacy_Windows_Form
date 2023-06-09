@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -145,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VarsityPharmacyDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="VarsityPharmacyDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VarsityPharmacyDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +218,17 @@
     </None>
     <None Include="VarsityPharmacyDataSet1.xss">
       <DependentUpon>VarsityPharmacyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="VarsityPharmacyDataSet2.xsc">
+      <DependentUpon>VarsityPharmacyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="VarsityPharmacyDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VarsityPharmacyDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VarsityPharmacyDataSet2.xss">
+      <DependentUpon>VarsityPharmacyDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

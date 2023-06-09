@@ -87,6 +87,16 @@ namespace Varsity_Phamarcy
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.customersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.varsityPharmacyDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.varsityPharmacyDataSet = new Varsity_Phamarcy.VarsityPharmacyDataSet();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Search = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Name = new System.Windows.Forms.TextBox();
+            this.customersTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.CustomersTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custFNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.custLNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,16 +108,6 @@ namespace Varsity_Phamarcy
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicalAidNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.varsityPharmacyDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.varsityPharmacyDataSet = new Varsity_Phamarcy.VarsityPharmacyDataSet();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Search = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Name = new System.Windows.Forms.TextBox();
-            this.customersTableAdapter = new Varsity_Phamarcy.VarsityPharmacyDataSetTableAdapters.CustomersTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
@@ -174,9 +174,9 @@ namespace Varsity_Phamarcy
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 16);
+            this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 16;
-            this.label2.Text = "CustFName";
+            this.label2.Text = "First Name";
             // 
             // label3
             // 
@@ -184,9 +184,9 @@ namespace Varsity_Phamarcy
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 16);
+            this.label3.Size = new System.Drawing.Size(81, 16);
             this.label3.TabIndex = 17;
-            this.label3.Text = "CustLName";
+            this.label3.Text = "Last Name";
             // 
             // label4
             // 
@@ -194,9 +194,9 @@ namespace Varsity_Phamarcy
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(9, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 16);
+            this.label4.Size = new System.Drawing.Size(99, 16);
             this.label4.TabIndex = 18;
-            this.label4.Text = "CustEmail";
+            this.label4.Text = "Email Adress";
             // 
             // label5
             // 
@@ -204,9 +204,9 @@ namespace Varsity_Phamarcy
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 16);
+            this.label5.Size = new System.Drawing.Size(85, 16);
             this.label5.TabIndex = 19;
-            this.label5.Text = "CustIdentity";
+            this.label5.Text = "Identity No.";
             // 
             // label7
             // 
@@ -214,9 +214,9 @@ namespace Varsity_Phamarcy
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(9, 249);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 16);
+            this.label7.Size = new System.Drawing.Size(79, 16);
             this.label7.TabIndex = 21;
-            this.label7.Text = "CustPhone";
+            this.label7.Text = "Phone No.";
             // 
             // label8
             // 
@@ -232,11 +232,11 @@ namespace Varsity_Phamarcy
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 343);
+            this.label9.Location = new System.Drawing.Point(7, 343);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 16);
+            this.label9.Size = new System.Drawing.Size(88, 16);
             this.label9.TabIndex = 23;
-            this.label9.Text = "MedicalAid";
+            this.label9.Text = "MedAid No.";
             // 
             // panel1
             // 
@@ -585,86 +585,6 @@ namespace Varsity_Phamarcy
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
             // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "custID";
-            this.dataGridViewTextBoxColumn12.HeaderText = "custID";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // custFNameDataGridViewTextBoxColumn1
-            // 
-            this.custFNameDataGridViewTextBoxColumn1.DataPropertyName = "custFName";
-            this.custFNameDataGridViewTextBoxColumn1.HeaderText = "custFName";
-            this.custFNameDataGridViewTextBoxColumn1.Name = "custFNameDataGridViewTextBoxColumn1";
-            this.custFNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // custLNameDataGridViewTextBoxColumn1
-            // 
-            this.custLNameDataGridViewTextBoxColumn1.DataPropertyName = "custLName";
-            this.custLNameDataGridViewTextBoxColumn1.HeaderText = "custLName";
-            this.custLNameDataGridViewTextBoxColumn1.Name = "custLNameDataGridViewTextBoxColumn1";
-            this.custLNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // custEmailAddressDataGridViewTextBoxColumn1
-            // 
-            this.custEmailAddressDataGridViewTextBoxColumn1.DataPropertyName = "custEmailAddress";
-            this.custEmailAddressDataGridViewTextBoxColumn1.HeaderText = "custEmailAddress";
-            this.custEmailAddressDataGridViewTextBoxColumn1.Name = "custEmailAddressDataGridViewTextBoxColumn1";
-            this.custEmailAddressDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // custIDNumberDataGridViewTextBoxColumn1
-            // 
-            this.custIDNumberDataGridViewTextBoxColumn1.DataPropertyName = "custIDNumber";
-            this.custIDNumberDataGridViewTextBoxColumn1.HeaderText = "custIDNumber";
-            this.custIDNumberDataGridViewTextBoxColumn1.Name = "custIDNumberDataGridViewTextBoxColumn1";
-            this.custIDNumberDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "custAge";
-            this.dataGridViewTextBoxColumn13.HeaderText = "custAge";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "custPhoneNumber";
-            this.dataGridViewTextBoxColumn14.HeaderText = "custPhoneNumber";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "custGender";
-            this.dataGridViewTextBoxColumn15.HeaderText = "custGender";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "medicalAidNumber";
-            this.dataGridViewTextBoxColumn16.HeaderText = "medicalAidNumber";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // medicalAidNameDataGridViewTextBoxColumn
-            // 
-            this.medicalAidNameDataGridViewTextBoxColumn.DataPropertyName = "MedicalAidName";
-            this.medicalAidNameDataGridViewTextBoxColumn.HeaderText = "MedicalAidName";
-            this.medicalAidNameDataGridViewTextBoxColumn.Name = "medicalAidNameDataGridViewTextBoxColumn";
-            this.medicalAidNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.medicalAidNameDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // customersBindingSource1
             // 
             this.customersBindingSource1.DataMember = "Customers";
@@ -744,6 +664,86 @@ namespace Varsity_Phamarcy
             this.button2.Text = "DELETE";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "custID";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Customer No.";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // custFNameDataGridViewTextBoxColumn1
+            // 
+            this.custFNameDataGridViewTextBoxColumn1.DataPropertyName = "custFName";
+            this.custFNameDataGridViewTextBoxColumn1.HeaderText = "First Name";
+            this.custFNameDataGridViewTextBoxColumn1.Name = "custFNameDataGridViewTextBoxColumn1";
+            this.custFNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // custLNameDataGridViewTextBoxColumn1
+            // 
+            this.custLNameDataGridViewTextBoxColumn1.DataPropertyName = "custLName";
+            this.custLNameDataGridViewTextBoxColumn1.HeaderText = "Last Name";
+            this.custLNameDataGridViewTextBoxColumn1.Name = "custLNameDataGridViewTextBoxColumn1";
+            this.custLNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // custEmailAddressDataGridViewTextBoxColumn1
+            // 
+            this.custEmailAddressDataGridViewTextBoxColumn1.DataPropertyName = "custEmailAddress";
+            this.custEmailAddressDataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.custEmailAddressDataGridViewTextBoxColumn1.Name = "custEmailAddressDataGridViewTextBoxColumn1";
+            this.custEmailAddressDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // custIDNumberDataGridViewTextBoxColumn1
+            // 
+            this.custIDNumberDataGridViewTextBoxColumn1.DataPropertyName = "custIDNumber";
+            this.custIDNumberDataGridViewTextBoxColumn1.HeaderText = "Identity Number";
+            this.custIDNumberDataGridViewTextBoxColumn1.Name = "custIDNumberDataGridViewTextBoxColumn1";
+            this.custIDNumberDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "custAge";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Age";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "custPhoneNumber";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Phone Number";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "custGender";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Gender";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "medicalAidNumber";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Aid Number";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // medicalAidNameDataGridViewTextBoxColumn
+            // 
+            this.medicalAidNameDataGridViewTextBoxColumn.DataPropertyName = "MedicalAidName";
+            this.medicalAidNameDataGridViewTextBoxColumn.HeaderText = "Aid Name";
+            this.medicalAidNameDataGridViewTextBoxColumn.Name = "medicalAidNameDataGridViewTextBoxColumn";
+            this.medicalAidNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.medicalAidNameDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Customer
             // 
@@ -871,6 +871,7 @@ namespace Varsity_Phamarcy
         private VarsityPharmacyDataSet varsityPharmacyDataSet;
         private System.Windows.Forms.BindingSource customersBindingSource1;
         private VarsityPharmacyDataSetTableAdapters.CustomersTableAdapter customersTableAdapter;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn custFNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn custLNameDataGridViewTextBoxColumn1;
@@ -882,6 +883,5 @@ namespace Varsity_Phamarcy
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicalAidNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button2;
     }
 }
