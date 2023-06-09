@@ -1,7 +1,8 @@
 # Varsity_Pharmacy_Windows_Form
-This is a windows form pharmacy system.
 
-Project Description.
+## This is a windows form pharmacy system.
+
+### Project Description.
 
 The project that is being developed is about the point-of-sale system integrated with the inventory 
 control system for the pharmacy. The name of this pharmacy is Varsity Pharmacy, located near the 
@@ -36,5 +37,6 @@ store and capture the payment. The whole system will consist of three entities: 
 and supplier.
 
 The whole project will take about approximately 7-8 months to complete. The tools to develop this 
-system will be MS Visio to estimate time and have better time management, Visual Studio to develop 
-the whole system, and MS SQL Server Management Studio to store data of the system.
+system will be MS Project to estimate time and have better time management, MS Visual Studio to 
+develop the whole system, MS Visio for diagrams drawings, and MS SQL Server Management Studio
+to store data of the system.
